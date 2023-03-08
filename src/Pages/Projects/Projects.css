@@ -1,0 +1,15 @@
+.projectspg{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.projectspg button{
+    background-color: rgb(204, 255, 255); 
+    color: black;
+    padding: 0.5rem; 
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 200px;
+}

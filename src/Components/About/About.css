@@ -1,0 +1,121 @@
+.grid4 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.about h1 {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.grid4 h2 {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.cola1 .sum {
+    font-size: 18px;
+}
+
+.about .cards {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about .card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 40%;
+    color: white;
+    font-size: 1rem;
+}
+
+.about .card:hover {
+    background-color: #000000;
+}
+
+.cola1 button {
+    background-color: rgb(204, 255, 255);
+    color: black;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 200px;
+}
+
+.cola1 .in-data {
+    background-color: #1b1c1e;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 39vw;
+    height: 60vh;
+}
+
+.cola2 .data {
+    background-color: #1b1c1e;
+    border-radius: 20px;
+    padding: 2rem;
+    font-size: 22px;
+    width: 39vw;
+    height: 60vh;
+}
+
+.cola2 .years {
+    color: rgb(204, 255, 255);
+}
+
+@media (max-width:1000px) {
+    .grid4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid4 h2 {
+        margin-left: 0rem;
+        text-align: center;
+    }
+
+    .cola1 .in-data {
+       
+        width: 70vw;
+        height: 30vh;
+    }
+    
+    .cola2 .data {
+        
+        width: 70vw;
+        height: 40vh;
+    }
+}
+@media (max-width:720px) {
+   
+    .cola1 .in-data {
+       
+        width: 70vw;
+        height: 60vh;
+    }
+    
+    .cola2 .data {
+        
+        width: 70vw;
+        height: 80vh;
+    }
+}

@@ -1,0 +1,118 @@
+.skills h1 {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.skills .grids {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.skills .container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #1b1c1e;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 2;
+    padding: 1rem;
+    width: 40vw;
+    height: 60vh;
+}
+
+.skills .grids img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.skills .container2 {
+    background-color: #1b1c1e;
+    border-radius: 20px;
+    width: 45vw;
+    height: 65vh;
+
+}
+
+.tab {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab button {
+    background-color: rgb(204, 255, 255);
+    color: black;
+    float: left;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: 0.3s;
+    margin-top: 2rem;
+}
+
+.tab button:hover {
+    background-color: grey;
+    color: white;
+}
+
+.tab button.active {
+    background-color: black;
+    color: white;
+}
+
+.tabcontent {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: none;
+    padding: 6px 12px;
+    margin-bottom: 1rem;
+}
+
+.tabcontent .h2 {
+    margin-top: 1rem;
+}
+
+.tabcontent .h {
+    margin-top: 8px;
+    color: rgb(204, 255, 255);
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.tabcontent .p {
+    font-size: 10px;
+}
+
+@media (max-width:1000px) {
+    .skills .grids {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills .grids img {
+        width: 150px;
+    }
+
+    .skills .container1 {
+        padding: 3rem;
+        width: 70vw;
+
+    }
+
+    .skills .container2 {
+        padding: 1rem;
+        width: 85vw;
+    }
+
+}

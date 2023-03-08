@@ -1,0 +1,36 @@
+.work-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 4rem;
+  margin:50px;
+}
+
+.projects h1{
+    text-align: center;
+    margin-top: 5rem;
+   
+}
+.projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.projects button{
+    background-color: rgb(204, 255, 255); 
+    color: black;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 200px;
+}
+@media (max-width:600px){
+  .work-list{
+    display: flex;
+    flex-direction: column;
+  }
+}

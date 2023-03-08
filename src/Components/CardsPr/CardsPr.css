@@ -1,0 +1,13 @@
+.CardsPg{
+    background-color: #5A5A5A;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.CardsPg h1,p{
+    margin-bottom: 1rem;
+}
+.CardsPg h1{
+    color: rgb(204, 255, 255);
+}

@@ -1,0 +1,50 @@
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 200px;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),  rgb(204, 255, 255));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  color: aliceblue;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.layer p{
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  transform: translateY(0%);
+}	
