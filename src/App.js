@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from "./Pages/Home/Home.js";
-import Projects from "./Pages/Projects/Projects";
-import About from "./Pages/About/About";
+import ProjectsPg from "./Pages/ProjectsPg/Projects";
+import AboutPg from "./Pages/AboutPg/About";
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Routes>
           <Route  path="/" element={<Home/>} ></Route>
-          <Route  path="/projects" element={<Projects/>} ></Route>
-          <Route  path="/about" element={<About/>} ></Route>
+          <Route  path="/projectspg" element={<ProjectsPg/>} ></Route>
+          <Route  path="/aboutpg" element={<AboutPg/>} ></Route>
         </Routes>
       </Router>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useEffect} from "react";
 import AnimatedCursor from "react-animated-cursor";
 import { Link } from "react-router-dom";
 import CardsPr from "../../Components/CardsPr/CardsPr";
@@ -7,10 +7,16 @@ import { motion } from "framer-motion";
 
 import "./Projects.css";
 
+
 const Projects = () => {
+
+  useEffect(() => {
+    const hiElement = document.getElementById("topProject");
+    hiElement.scrollIntoView();
+  }, []);
   return (
     <div>
-      <div className="projectspg">
+      <div className="projectspg" >
         <AnimatedCursor
           innerSize={15}
           outerSize={8}
@@ -38,7 +44,7 @@ const Projects = () => {
             ".link",
           ]}
         />
-        <h1 className="h1">My Projects</h1>
+        <h1 id="topProject" className="h1">My Projects</h1>
         <CardsPr
           name="My Gallery"
           intro="Image Gallery build with Unsplash API to provide images based on entered topic"

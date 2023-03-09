@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');:root{
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root{
     --bg-color:#000000;
   }
   body{
@@ -13,8 +15,8 @@
     margin: 0;
     padding: 0;
     color: white;
-    font-family: 'Lato', sans-serif;
-    }
+    font-family: 'Raleway', sans-serif;
+      }
   
   ul{
     list-style-type: none;

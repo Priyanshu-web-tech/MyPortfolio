@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useEffect} from "react";
 import AnimatedCursor from "react-animated-cursor";
 import Footer from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
@@ -6,7 +6,13 @@ import "./About.css";
 import {motion} from "framer-motion";
 
 const About = () => {
-  return (
+
+  
+  useEffect(() => {
+    const hiElement = document.getElementById("topAbout");
+    hiElement.scrollIntoView();
+  }, []);
+  return (  
     <div>
       <div className="aboutpg">
         <AnimatedCursor
@@ -37,7 +43,7 @@ const About = () => {
           ]}
         />
        
-        <h1>Introduction</h1>
+        <h1 id="topAbout">Introduction</h1>
         <div className="intro">
         <p>
           Hi,My name is Priyanshu Sharma from Muzaffarnagar,UP.
