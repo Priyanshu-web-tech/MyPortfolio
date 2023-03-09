@@ -67,4 +67,7 @@
   .cont{
     margin-bottom: 2rem;
   }
+  .grid::before {
+    background-attachment: initial;
+  }
 }
