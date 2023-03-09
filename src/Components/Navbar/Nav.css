@@ -40,8 +40,10 @@
     text-decoration: line-through;
     font-weight: 800;
 }
-@media (max-width:420px) {
+@media (max-width:445px) {
     .nav li {
         padding: 0.5rem;
+        font-size: 15px;
     }
+    
 }

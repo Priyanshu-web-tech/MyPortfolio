@@ -18,11 +18,6 @@
 }
 
 
-
-.cola1 .sum {
-    font-size: 18px;
-}
-
 .about .cards {
     text-align: center;
     display: flex;
@@ -58,22 +53,23 @@
     margin-top: 1rem;
     width: 200px;
 }
+.cola1 .sum {
+    font-size: 23px;
+}
 
 .cola1 .in-data {
     background-color: #1b1c1e;
     border-radius: 20px;
-    padding: 2rem;
-    width: 39vw;
-    height: 60vh;
+    padding: 1rem;
+    width: 500px;
 }
 
 .cola2 .data {
     background-color: #1b1c1e;
     border-radius: 20px;
-    padding: 2rem;
-    font-size: 22px;
-    width: 39vw;
-    height: 60vh;
+    padding: 1rem;
+    font-size: 21.5px;
+    width: 500px;
 }
 
 .cola2 .years {
@@ -92,30 +88,14 @@
         margin-left: 0rem;
         text-align: center;
     }
-
-    .cola1 .in-data {
-       
-        width: 70vw;
-        height: 30vh;
-    }
-    
-    .cola2 .data {
-        
-        width: 70vw;
-        height: 40vh;
-    }
 }
-@media (max-width:720px) {
+@media (max-width:570px) {
    
     .cola1 .in-data {
-       
-        width: 70vw;
-        height: 60vh;
+        width: 300px;
     }
     
     .cola2 .data {
-        
-        width: 70vw;
-        height: 80vh;
-    }
+        width: 300px;
+    } 
 }

@@ -22,8 +22,15 @@
     font-size: 20px;
     line-height: 2;
     padding: 1rem;
-    width: 40vw;
-    height: 60vh;
+    width: 500px;
+    /* height: 60vh; */
+}
+
+.skills .container2 {
+    background-color: #1b1c1e;
+    border-radius: 20px;
+    width: 500px;
+    /* height: 65vh; */
 }
 
 .skills .grids img {
@@ -31,13 +38,7 @@
     border-radius: 10px;
 }
 
-.skills .container2 {
-    background-color: #1b1c1e;
-    border-radius: 20px;
-    width: 45vw;
-    height: 65vh;
 
-}
 
 .tab {
     overflow: hidden;
@@ -99,20 +100,18 @@
         justify-content: center;
         align-items: center;
     }
-
     .skills .grids img {
         width: 150px;
     }
-
+}
+@media (max-width:570px) {
     .skills .container1 {
-        padding: 4rem;
-        width: 55vw;
-
+        width: 300px;
     }
-
+    .skills .container1 p{
+        font-size: 13px;
+    }
     .skills .container2 {
-        padding: 1rem;
-        width: 80vw;
-    }
-
+        width: 300px;
+    } 
 }

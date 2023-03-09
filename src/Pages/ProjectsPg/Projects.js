@@ -52,7 +52,7 @@ const Projects = () => {
         />
         <CardsPr
           name="PresentSeek"
-          intro="Attendance Management System build for our College with the help,TECH STACK USED-HTML,CSS,JavaScript,PHP and MySql"
+          intro="Attendance Management System build for our College with advanced features like Attendance Prediction,TECH STACK USED-HTML,CSS,JavaScript,PHP and MySql."
           link="https://github.com/Priyanshu-web-tech/PresentSeek"
         />
         <CardsPr
