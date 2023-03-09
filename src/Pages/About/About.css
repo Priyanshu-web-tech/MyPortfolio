@@ -1,4 +1,5 @@
 .aboutpg{
+    
     margin-left: 3rem;
     line-height: 2;
     margin-right: 3rem;
@@ -20,9 +21,8 @@
     text-decoration: line-through;
     font-weight: 100;
 }
-.aboutpg h2,h3{
+.aboutpg h3{
     color: #000000;
-
 }
 .aboutpg .link{
     color: rgb(204, 255, 255);

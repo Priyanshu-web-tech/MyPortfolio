@@ -10,15 +10,6 @@ import {
 } from "react-icons/ai";
 
 const Footer = () => {
-  const footerVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5, delay: 0.2, type: "spring", stiffness: 100 },
-    },
-  };
-
   const buttonVariants = {
     hover: {
       scale: 1.1,
@@ -26,28 +17,19 @@ const Footer = () => {
     },
   };
 
-  const socialVariants = {
-    hidden: { opacity: 0, x: 20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5, type: "spring", stiffness: 100 },
-    },
-  };
-
   return (
-    <motion.div className="footer" variants={footerVariants} initial="hidden" animate="visible">
+    <div className="footer">
       <br />
       <div className="grid3">
-        <motion.div className="col1" variants={socialVariants}>
+        <div className="col1">
           <h1>Let's Connect</h1>
           <a href={Resume}>
             <motion.button variants={buttonVariants} whileHover="hover">
               Download CV
             </motion.button>
           </a>
-        </motion.div>
-        <motion.div className="col2" variants={socialVariants}>
+        </div>
+        <div className="col2">
           <h4>Socials:</h4>
           <a href="https://www.facebook.com/profile.php?id=100069703429860&mibextid=ZbWKwL">
             <motion.div whileHover={{ scale: 1.2 }}>
@@ -69,10 +51,10 @@ const Footer = () => {
               <AiFillLinkedin size={30} />
             </motion.div>
           </a>
-        </motion.div>
+        </div>
       </div>
-      <motion.p variants={socialVariants}>&copy; 2022,All right reserved</motion.p>
-    </motion.div>
+      <p>&copy; 2022,All right reserved</p>
+    </div>
   );
 };
 

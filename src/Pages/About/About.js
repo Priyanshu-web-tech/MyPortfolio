@@ -36,10 +36,7 @@ const About = () => {
             ".link",
           ]}
         />
-        <Link to="/">
-          <motion.button transition={{duration:0.3}}
-          whileHover={{scale:1.1}}>Go Back</motion.button>
-        </Link>
+       
         <h1>Introduction</h1>
         <div className="intro">
         <p>

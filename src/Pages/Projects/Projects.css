@@ -13,3 +13,9 @@
     margin-top: 1rem;
     width: 200px;
 }
+.h1{
+    text-align: center;
+    text-decoration: line-through;
+    color: rgb(204, 255, 255);
+    margin-top: 2rem;
+}
