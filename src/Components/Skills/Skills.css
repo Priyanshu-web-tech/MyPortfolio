@@ -48,8 +48,8 @@
 }
 
 .tab button {
-    background-color: rgb(204, 255, 255);
-    color: black;
+    background-color:#000000 ;
+    color: white;
     float: left;
     border-radius: 5px;
     outline: none;
@@ -65,8 +65,8 @@
 }
 
 .tab button.active {
-    background-color: black;
-    color: white;
+    background-color: rgb(204, 255, 255);
+    color: #000000;
 }
 
 .tabcontent {
@@ -75,10 +75,6 @@
     display: none;
     padding: 6px 12px;
     margin-bottom: 1rem;
-}
-
-.tabcontent .h2 {
-    margin-top: 1rem;
 }
 
 .tabcontent .h {
@@ -91,6 +87,11 @@
 
 .tabcontent .p {
     font-size: 10px;
+}
+
+.sk{
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 @media (max-width:1000px) {
@@ -107,11 +108,14 @@
 @media (max-width:570px) {
     .skills .container1 {
         width: 300px;
+        height: 300px;
     }
     .skills .container1 p{
         font-size: 13px;
+        
     }
     .skills .container2 {
         width: 300px;
+        height: 350px;
     } 
 }

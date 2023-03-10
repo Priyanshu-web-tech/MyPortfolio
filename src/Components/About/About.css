@@ -35,10 +35,8 @@
     width: 40%;
     color: white;
     font-size: 1rem;
-}
-
-.about .card:hover {
     background-color: #000000;
+
 }
 
 .cola1 button {

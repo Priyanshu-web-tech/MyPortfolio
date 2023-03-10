@@ -33,6 +33,7 @@ const Hero = () => {
           "h5",
           "h6",
           ".link",
+          "img"
         ]}
       />
       <div>
@@ -72,9 +73,10 @@ const Hero = () => {
           </div>
           <div className="col2">
             <motion.img
+            whileHover={{ scale: 1.1 }}
               initial={{ x: 1000 }}
               animate={{ x: 10 }}
-              transition={{ delay: 0.1, duration: 1, type: "tween" }}
+              transition={{ delay: 0.1, duration: 1, type: "spring" }}
               src={mypic}
               alt=""
             />

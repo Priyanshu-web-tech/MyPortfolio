@@ -34,14 +34,7 @@
 .hero img {
   width: 250px;
   margin: 6rem auto auto auto;
-  cursor: pointer;
-  transform: rotate(-4deg);
-  transition: all 0.5s;
   border-radius: 100px;
-}
-
-.hero img:hover {
-  transform: scale(1.1);
 }
 
 .cont {
