@@ -48,7 +48,7 @@ const Projects = () => {
         <CardsPr
           name="My Gallery"
           intro="Image Gallery build with Unsplash API to provide images based on entered topic"
-          link=" https://priyanshu-web-tech.github.io/Online_Gallery/"
+          link="https://wondrous-pixie-fe47ad.netlify.app/"
         />
         <CardsPr
           name="PresentSeek"
@@ -58,17 +58,17 @@ const Projects = () => {
         <CardsPr
           name="Netflix Clone"
           intro="Netflix Clone build with simple vanilla CSS and HTML solving the page top up problem and providing carasoul for new releases "
-          link=" https://priyanshu-web-tech.github.io/Netflix/"
+          link="https://eloquent-lily-14a2f3.netlify.app/"
         />
         <CardsPr
           name="Online Quiz"
           intro="Simple Quiz Website build with the help of JavaScript"
-          link=" https://priyanshu-web-tech.github.io/Quiz/"
+          link="https://stalwart-fairy-7d2e97.netlify.app/"
         />
         <CardsPr
           name="CodeSeek"
           intro="A tech Blog Website,providing latest informations about new tech around the glob"
-          link=" https://priyanshu-web-tech.github.io/Online_Gallery/"
+          link="https://coruscating-daffodil-8f4c52.netlify.app/"
         />
         <CardsPr
           name="Quiz"
@@ -76,7 +76,8 @@ const Projects = () => {
         three categories-History,Sports,Technology also it allows the game Admin 
         to Add,Update,Delete Questions and it is personalized User Id and 
         Password based!"
-          link="https://priyanshu-web-tech.github.io/Blog/"
+        link="https://github.com/Priyanshu-web-tech/Quiz_Python-SQL"
+
         />
 
         <Link to="/">

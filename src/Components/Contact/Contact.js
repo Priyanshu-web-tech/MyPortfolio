@@ -50,6 +50,7 @@ const Contact = () => {
           <h3>Connect Directly</h3>
           <div className="cards">
             <motion.a
+            target="_blank"
               href="mailto:priyanshusharma6666@gmail.com"
               transition={{ duration: 0.3 }}
               whileHover={{ scale: 1.1 }}
@@ -61,6 +62,7 @@ const Contact = () => {
               <AiOutlineArrowRight />
             </motion.a>
             <motion.a
+            target="_blank"
               href="http://wa.me/918279707568"
               transition={{ duration: 0.3 }}
               whileHover={{ scale: 1.1 }}

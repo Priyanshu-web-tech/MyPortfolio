@@ -7,7 +7,7 @@ const CardsPr = (props) => {
     <div className="CardsPg">
       <h1>{props.name}</h1>
       <p>{props.intro}</p>
-      <a href={props.link}>
+      <a target="_blank" href={props.link}>
         <BsFillArrowUpRightCircleFill size={30} />
       </a>
     </div>

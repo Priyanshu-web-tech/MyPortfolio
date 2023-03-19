@@ -9,7 +9,7 @@ const Card = (props) => {
             <div className="layer">
               <h3>{props.name}</h3>
               <p>{props.intro}</p>
-              <a href={props.link}><BsFillArrowUpRightCircleFill size={30}/></a>
+              <a href={props.link} target="_blank"><BsFillArrowUpRightCircleFill size={30}/></a>
               </div>
           </div>  
     </div>
