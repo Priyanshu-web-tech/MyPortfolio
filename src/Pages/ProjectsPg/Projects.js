@@ -46,6 +46,11 @@ const Projects = () => {
         />
         <h1 id="topProject" className="h1">My Projects</h1>
         <CardsPr
+          name="BitMap"
+          intro="A CryptoCurrency Tracker providing updated information about different cryptocurrencies."
+          link="https://bit-map.netlify.app/"
+        />
+        <CardsPr
           name="My Gallery"
           intro="Image Gallery build with Unsplash API to provide images based on entered topic"
           link="https://wondrous-pixie-fe47ad.netlify.app/"
