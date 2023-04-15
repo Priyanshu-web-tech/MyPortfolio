@@ -76,8 +76,7 @@ const About = () => {
         <p>Rated 1452 on LeetCode,Solved 100+ Problems</p>
 
         <p className="link">
-          Visit My LinkTree to find my CP Platform & other Handles:
-          <a href="https://linktr.ee/__priyanshu__">LinkTree</a>
+          Visit My <a target="_blank" href="https://linktr.ee/__priyanshu__">LinkTree</a> to find my CP Platform & other Handles
         </p>
         </div>
         <Link to="/">

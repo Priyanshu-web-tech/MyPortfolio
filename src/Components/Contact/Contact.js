@@ -1,46 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import { AiOutlineArrowRight, AiOutlineMail } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  useEffect(() => {
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbxa7pthWrIyeoIJ9pwuH4qf8muUBT59bkxngfzJj0G1Jyomuqa7lD4cTMtZhnNGrcIn1A/exec";
-    const form = document.forms["submit-to-google-sheet"];
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
     const msg = document.getElementById("msg");
-
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const name = formData.get("name");
-      const mail = formData.get("mail");
-      const message = formData.get("message");
-    
-      form.elements.name.value = "";
-      form.elements.mail.value = "";
-      form.elements.message.value = "";
-    
-      fetch(scriptURL, { method: "POST", body: formData })
-        .then((response) => {
-          const msg = document.getElementById("msg");
+    emailjs
+      .sendForm(
+        "service_6ngjn9h",
+        "template_1z2vqiw",
+        form.current,
+        "lreEZdgLbGTfkQ2Vv"
+      )
+      .then(
+        (result) => {
           msg.innerHTML = "Message Sent Successfully";
           setTimeout(function () {
             msg.innerHTML = "";
+            form.current.reset(); 
           }, 1000);
-        })
-        .catch((error) => console.error("Error!", error.message));
-    };
-    
-
-    form.addEventListener("submit", handleSubmit);
-
-    // cleanup function to remove the event listener
-    return () => {
-      form.removeEventListener("submit", handleSubmit);
-    };
-  }, []);
+        },
+        (error) => {
+          msg.innerHTML = "Error in Sending Message";
+          setTimeout(function () {
+            msg.innerHTML = "";
+            form.current.reset(); 
+          }, 1000);
+        }
+      );
+  };
 
   return (
     <div className="contact" id="contact">
@@ -50,7 +43,7 @@ const Contact = () => {
           <h3>Connect Directly</h3>
           <div className="cards">
             <motion.a
-            target="_blank"
+              target="_blank"
               href="mailto:priyanshusharma6666@gmail.com"
               transition={{ duration: 0.3 }}
               whileHover={{ scale: 1.1 }}
@@ -62,7 +55,7 @@ const Contact = () => {
               <AiOutlineArrowRight />
             </motion.a>
             <motion.a
-            target="_blank"
+              target="_blank"
               href="http://wa.me/918279707568"
               transition={{ duration: 0.3 }}
               whileHover={{ scale: 1.1 }}
@@ -75,15 +68,15 @@ const Contact = () => {
             </motion.a>
           </div>
         </div>
-        <form name="submit-to-google-sheet" className="column2">
+        <form ref={form} className="column2" onSubmit={sendEmail}>
           <h3>Write Your Query</h3>
           <div className="inputs">
-            <input name="name" type="Text" placeholder="Name" required />
+            <input name="name" type="text" placeholder="Name" required />
             <input name="mail" type="email" placeholder="Mail" required />
             <textarea
               name="message"
               className="message"
-              type="Text"
+              type="text"
               placeholder="Message"
               rows={4}
               cols={50}
@@ -105,5 +98,4 @@ const Contact = () => {
     </div>
   );
 };
-
 export default Contact;
