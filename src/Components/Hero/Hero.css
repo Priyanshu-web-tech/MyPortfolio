@@ -1,13 +1,15 @@
-.grid {
+.header {
   margin-top: 5rem;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 70vh;
   font-weight: 800;
   position: relative;
+   font-size: 4rem;
 }
 
-.grid::before {
+.header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -24,20 +26,16 @@
 }
 
 .cont {
-  margin-top: 7rem;
-  margin-left: 3rem;
-  font-size: 2.5rem;
+ margin-top: 4rem;
+ margin-left: 4rem;
 }
 
 @media (max-width: 1000px) {
-  .grid {
-    height: auto;
-  }
-  
   .cont{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
   }
-  .grid::before {
+  .header::before {
     background-attachment: initial;
   }
 }

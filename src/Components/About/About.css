@@ -12,10 +12,12 @@
 
 .about h1 {
     text-align: center;
+    margin-top: 10rem;
+    font-size: 50px;
 }
 
 .about img {
-    width: 230px;
+    width: 220px;
     height: 380px;
     box-shadow: 2px 2px 15px rgb(7, 238, 238);
 }

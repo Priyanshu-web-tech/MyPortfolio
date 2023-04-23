@@ -21,7 +21,7 @@ const Hero = () => {
           'input[type="number"]',
           'input[type="submit"]',
           'input[type="image"]',
-          'label[for]',
+          "label[for]",
           "select",
           "textarea",
           "p",
@@ -32,48 +32,45 @@ const Hero = () => {
           "h5",
           "h6",
           ".link",
-          "img"
+          "img",
         ]}
       />
       <div>
-        <div className="grid">
-          <div className="col1">
-            <motion.div
-              initial={{ x: -1000 }}
-              animate={{ x: -10 }}
-              transition={{ delay: 0.1, duration: 1, type: "tween" }}
-              className="cont"
-            >
-              <div className="box">
-                <h3>Welcome to my Portfolio</h3>
-                <br />
-              </div>
-              <div className="intro">
-                <h2>Hi I'm Priyanshu </h2>
-                <TypeWriterEffect
-                  textStyle={{
-                    color: "rgb(204, 255, 255)",
-                    fontWeight: 800,
-                    fontSize: "2rem",
-                  }}
-                  startDelay={2000}
-                  cursorColor="#3F3D56"
-                  multiText={[
-                    "Student",
-                    "Web Developer",
-                    "Python Developer",
-                    "Data Science Enthusiast",
-                  ]}
-                  multiTextDelay={1000}
-                  typeSpeed={30}
-                />
-              </div>
-            </motion.div>
-          </div>
+        <div className="header">
+          <motion.div
+            initial={{ x: -1000 }}
+            animate={{ x: -10 }}
+            transition={{ delay: 0.1, duration: 1, type: "tween" }}
+            className="cont"
+          >
+            <div className="box">
+              <h3>Welcome to my Portfolio</h3>
+              <br />
+            </div>
+            <div className="intro">
+              <h2>Hi I'm Priyanshu </h2>
+              <TypeWriterEffect
+                textStyle={{
+                  color: "rgb(204, 255, 255)",
+                  fontWeight: 800,
+                  fontSize: "2rem",
+                }}
+                startDelay={2000}
+                cursorColor="#3F3D56"
+                multiText={[
+                  "Student",
+                  "Web Developer",
+                  "Python Developer",
+                  "Data Science Enthusiast",
+                ]}
+                multiTextDelay={1000}
+                typeSpeed={30}
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Hero;

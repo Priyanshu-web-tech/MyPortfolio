@@ -30,34 +30,11 @@ const Home = () => {
         <div>
           <Navbar />
           <Hero />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
           <About />
-          <br />
-          <br />
-          <br />
-          <br />
           <Skills />
-          <br />
-          <br />
-          <br />
-          <br />
           <Projects />
-          <br />
-          <br />
-          <br />
-          <br />
           <Contact />
-          <br />
-          <br />
-          <br />
-          <br />
           <Footer />
-         
         </div>
       )}
     </div>

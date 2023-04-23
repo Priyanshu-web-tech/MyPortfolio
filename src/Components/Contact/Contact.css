@@ -1,8 +1,11 @@
+.contact h1{
+margin-top: 10rem;
+font-size: 50px;
+}
+
 .contact{
-    margin-top: 5rem;
     text-align: center;
     overflow-x: hidden;
-
 }
 .grid2{
     margin-top: 3rem;
