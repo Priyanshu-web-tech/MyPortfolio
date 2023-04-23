@@ -56,6 +56,29 @@ const About = () => {
         </p>
         </div>
 
+        <h1 >Education</h1>
+        <div className="education">
+        <div className="1st">
+              <p className="years">2017-2019</p>
+              <p> INFANT JESUS SCHOOL,SAHARANPUR-High School with Science</p>
+            </div>
+            <div className="2nd">
+              <p className="years">2019-2021</p>
+              <p>
+                ST.MARY’S ACADEMY,SAHARANPUR-Intermediate with PCM,English and
+                CS
+              </p>
+            </div>
+            <div className="3rd">
+              <p className="years">2021-2025</p>
+              <p>
+                ABES ENGINEERING COLLEGE(AKTU LUCKNOW)- B.Tech in Data Science
+              </p>
+            </div>
+        </div>
+
+        
+
         <h1>Interests</h1>
 
         <div className="int">

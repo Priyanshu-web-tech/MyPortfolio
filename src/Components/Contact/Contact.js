@@ -39,7 +39,11 @@ const Contact = () => {
     <div className="contact" id="contact">
       <h1>Contact Me</h1>
       <div className="grid2">
-        <div className="column1">
+        <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1, type: "tween" }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className="column1">
           <h3>Connect Directly</h3>
           <div className="cards">
             <motion.a
@@ -67,8 +71,12 @@ const Contact = () => {
               <AiOutlineArrowRight />
             </motion.a>
           </div>
-        </div>
-        <form ref={form} className="column2" onSubmit={sendEmail}>
+        </motion.div>
+        <motion.form 
+        initial={{ opacity: 0, y: -200 }}
+        transition={{ duration: 1, type: "tween" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        ref={form} className="column2" onSubmit={sendEmail}>
           <h3>Write Your Query</h3>
           <div className="inputs">
             <input name="name" type="text" placeholder="Name" required />
@@ -93,7 +101,7 @@ const Contact = () => {
             </motion.button>
           </div>
           <span id="msg"></span>
-        </form>
+        </motion.form>
       </div>
     </div>
   );

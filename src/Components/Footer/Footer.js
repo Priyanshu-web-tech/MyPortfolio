@@ -55,7 +55,9 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <p>&copy; 2022,All right reserved</p>
+      <p >Copyright &copy; 2023,All right reserved.</p>
+      <p className="copyright">Made by <a target="_blank" href="https://github.com/Priyanshu-web-tech">Priyanshu</a></p>
+      <br />
     </div>
   );
 };

@@ -2,7 +2,7 @@
   margin-top: 5rem;
   display: grid;
   grid-template-columns: auto auto;
-  height: 90vh;
+  height: 70vh;
   font-weight: 800;
   position: relative;
 }
@@ -23,20 +23,6 @@
   z-index: -1;
 }
 
-
-.col2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 50vh;
-}
-
-.hero img {
-  width: 250px;
-  margin: 6rem auto auto auto;
-  border-radius: 100px;
-}
-
 .cont {
   margin-top: 7rem;
   margin-left: 3rem;
@@ -45,18 +31,9 @@
 
 @media (max-width: 1000px) {
   .grid {
-    display: flex;
-    flex-direction: column-reverse;
     height: auto;
   }
   
-  .col2 {
-    max-height: 40vh;
-  }
-
-  .hero img {
-    margin-top: 2rem;
-  }
   .cont{
     margin-bottom: 2rem;
   }

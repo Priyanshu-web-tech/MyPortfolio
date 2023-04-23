@@ -1,7 +1,10 @@
+.about {
+    overflow-x: hidden;
+}
+
 .grid4 {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 3rem;
     margin-top: 2rem;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -9,38 +12,35 @@
 
 .about h1 {
     text-align: center;
-    margin-top: 5rem;
 }
 
-.grid4 h2 {
-    margin-left: 2rem;
-    margin-bottom: 1rem;
+.about img {
+    width: 230px;
+    height: 380px;
+    box-shadow: 2px 2px 15px rgb(7, 238, 238);
 }
 
+.about img:hover {
+    box-shadow: 0px 0px 0px;
+}
 
-.about .cards {
-    text-align: center;
+.about .cola1{
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 500px;
 }
-
-.about .card {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    width: 40%;
-    color: white;
-    font-size: 1rem;
-    background-color: #000000;
-
+.about .cola2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    width: 500px;
+    line-height: 1.5;
+    font-size: 17px;
 }
-
-.cola1 button {
-    background-color: rgb(204, 255, 255);
+.about button{
+    background-color: rgb(204, 255, 255); 
     color: black;
     padding: 0.5rem;
     text-align: center;
@@ -51,49 +51,20 @@
     margin-top: 1rem;
     width: 200px;
 }
-.cola1 .sum {
-    font-size: 23px;
-}
-
-.cola1 .in-data {
-    background-color: #1b1c1e;
-    border-radius: 20px;
-    padding: 1rem;
-    width: 500px;
-}
-
-.cola2 .data {
-    background-color: #1b1c1e;
-    border-radius: 20px;
-    padding: 1rem;
-    font-size: 21.5px;
-    width: 500px;
-}
-
-.cola2 .years {
-    color: rgb(204, 255, 255);
-}
 
 @media (max-width:1000px) {
-    .grid4 {
+    .about img {
+        margin-right: 1.5rem;
+    }
+    .about .grid4 {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
-
-    .grid4 h2 {
-        margin-left: 0rem;
-        text-align: center;
-    }
-}
-@media (max-width:570px) {
-   
-    .cola1 .in-data {
-        width: 300px;
+    .about .cola2{
+        margin-top: 2rem;
+        width: 100%;
     }
     
-    .cola2 .data {
-        width: 300px;
-    } 
 }
