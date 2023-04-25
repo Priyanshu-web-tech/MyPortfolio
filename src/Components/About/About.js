@@ -1,10 +1,14 @@
 import React from "react";
 import "./About.css";
+import Resume from "../../Assets/Resume.pdf";
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import mypic from "../../Assets/mypic.jpg";
 
 const About = () => {
+
+
   return (
     <div className="about" id="about">
       <h1>About Me</h1>
@@ -38,8 +42,22 @@ const About = () => {
           about these technologies.
           I'm looking forward for new opportunities,Feel Free to contact me.
           <br />
-          <Link to="aboutpg"><motion.button transition={{duration:0.3}}
-          whileHover={{scale:1.1}}>Know More About me</motion.button></Link>
+          <div className="buttons">
+          <Link to="aboutpg"><motion.button
+           transition={{duration:0.3}}
+          whileHover={{scale:1.1}}
+          >Know More About me</motion.button></Link>
+          <a 
+          target="_blank"
+          href={Resume}>
+            <motion.button
+              transition={{duration:0.3}}
+              whileHover={{scale:1.1}}
+              >
+              Download Resume
+            </motion.button>
+          </a>
+          </div>
         </p>
         </div>
       </motion.div>

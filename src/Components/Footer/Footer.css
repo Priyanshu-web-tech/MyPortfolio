@@ -4,55 +4,20 @@
 }
 .footer p{
     text-align: center;
-    margin-top: 1rem;
 }
-.grid3{
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-bottom: 2rem;
+.connect{
+    margin-bottom: 1rem;
 }
-.footer .col1{
-    margin-left: 60px;
-}
-.footer button{
-    background-color: rgb(204, 255, 255); 
-    color: black;
-    padding: 0.5rem;
-    text-align: center;
-    font-weight: 800;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 1rem;
-    width: 50%;
-}
-.footer .col2 a{
+.footer .connect a{
     margin-left: 15px;
-    cursor: pointer;
 }
 .footer .copyright a{
     color: rgb(204, 255, 255);
 }
 
-.footer .col2 {
+.footer .connect {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-@media (max-width:520px){
-.grid3 .col2{
-    display: flex;
-    flex-direction: column
-}
-.grid3 .col2 h4{
-    margin-bottom: 1rem;
-}
-.grid3 .col2 a{
-    margin-right: 2rem;
-}
-.grid3 h1{
-    margin-top: 4rem;
-}
-}
