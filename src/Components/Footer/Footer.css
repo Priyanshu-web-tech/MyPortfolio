@@ -1,6 +1,7 @@
 .footer{
     margin-top: 10rem;
     background-color: #1b1c1e;
+    overflow-x: hidden;
 }
 .footer p{
     text-align: center;
