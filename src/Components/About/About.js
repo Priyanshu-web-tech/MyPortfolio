@@ -46,7 +46,7 @@ const About = () => {
           <Link to="aboutpg"><motion.button
            transition={{duration:0.3}}
           whileHover={{scale:1.1}}
-          >Know More About me</motion.button></Link>
+          >Read More</motion.button></Link>
           <a 
           target="_blank"
           href={Resume}>
