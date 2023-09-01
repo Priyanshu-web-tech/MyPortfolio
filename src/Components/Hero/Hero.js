@@ -61,7 +61,7 @@ const Hero = () => {
                   "Student",
                   "Web Developer",
                   "Python Developer",
-                  "Data Science Enthusiast",
+                  "Machine Learning Enthusiast",
                 ]}
                 multiTextDelay={1000}
                 typeSpeed={30}

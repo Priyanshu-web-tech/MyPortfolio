@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home.js";
 import ProjectsPg from "./Pages/ProjectsPg/Projects";
 import AboutPg from "./Pages/AboutPg/About";
 
+
 function App() {
   return (
     <div className="App">
