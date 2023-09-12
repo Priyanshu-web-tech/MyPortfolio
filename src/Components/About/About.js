@@ -14,12 +14,10 @@ const About = () => {
         </div>
         <div className="cola2">
           <p>
-            Hi, I'm a second-year student at ABESEC, pursuing my Bachelor's of
+            Hi, I'm a Pre Final Year student at ABESEC, pursuing my Bachelor's of
             Technology in Computer Science with specialization in DATA SCIENCE.
-            <br />
-            I am from Muzaffarnagar, UP.
-            <br />
-            I am very passionate about Web Development & Data Science and have a
+            
+            I am very passionate about Web Development & Machine Learning and have a
             keen interest to learn more about these technologies. I'm looking
             forward to new opportunities. Feel Free to contact me.
             <br />
