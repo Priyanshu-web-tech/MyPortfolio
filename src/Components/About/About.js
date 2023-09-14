@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.css";
-import Resume from "../../Assets/Resume.pdf";
 import { Link } from "react-router-dom";
 import mypic from "../../Assets/mypic.jpg";
 
@@ -25,7 +24,7 @@ const About = () => {
               <Link to="aboutpg">
                 <button>Read More</button>
               </Link>
-              <a target="_blank" href={Resume}>
+              <a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/file/d/1O4ta115lkyK4T-mZ6IXr-KK9Q-ugwkzt/view?usp=drive_link">
                 <button>Download Resume</button>
               </a>
             </div>
