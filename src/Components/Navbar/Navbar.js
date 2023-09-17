@@ -1,55 +1,64 @@
 import React, { useState, useEffect } from "react";
 import "./Nav.css";
+import open from "../../Assets/open.png";
+import close from "../../Assets/close.png";
+import logo from "../../Assets/logo.png";
 
 const Navbar = () => {
-  const [scroll, setScroll] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
-    const onScroll = () => {
-      const scrollCheck = window.scrollY > 100;
-      if (scrollCheck !== scroll) {
-        setScroll(scrollCheck);
-      }
-    };
-
-    document.addEventListener("scroll", onScroll);
-
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      document.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [scroll, setScroll]);
+  }, []);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }, [isMenuOpen]);
+  
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
 
   return (
-    <div>
-      <div className={`nav${scroll ? " scroll" : ""}`}>
-        <div className="container">
-          <ul>
-            <li className="nav-item">
-              <a href="#hero">Home</a>
-              
-            </li>
-            <li className="nav-item">
-              <a href="#about">About</a>
-              
-            </li>
-            <li className="nav-item">
-            <a href="#skills">Skills</a>
-
-              
-            </li>
-            <li className="nav-item">
-            <a href="#project">My Work</a>
-
-              
-            </li>
-            <li className="nav-item">
-              <a href="#contact">Contact</a>
-              
-            </li>
-          </ul>
+    <>
+      <nav className={` ${scrolling ? 'scrolling' : ''}`}>
+        <div className="logo">
+          <img src={logo} alt="" />
         </div>
-      </div>
-    </div>
+        <div className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+          <img className="bar" id="toggle-icon" src={isMenuOpen ? close : open} alt="Menu" />
+        </div>
+
+        <ul className={`menu ${isMenuOpen ? 'active' : ''}`}>
+          <li><a href="#hero" onClick={closeMenu}>Home</a></li>
+          <li><a href="#about" onClick={closeMenu}>About</a></li>
+          <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
+          <li><a href="#project" onClick={closeMenu}>My Work</a></li>
+          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+        </ul>
+      </nav>
+    </>
   );
 };
 
