@@ -1,0 +1,66 @@
+#hero {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: center;
+  padding: 120px 0;
+  overflow-x: hidden;
+}
+
+.hero-content {
+  text-align: right;
+  margin-right: 2rem;
+}
+
+.hero-content h2,
+.hero-content h1,
+.tagline {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.hero-content h2 {
+  margin-top: 1rem;
+  font-size: 60px;
+}
+
+.hero-content h1 {
+  font-size: 130px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1675880259894-36fe797b7fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXF1YXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60");
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 25s linear infinite;
+}
+
+.tagline {
+  font-size: 50px;
+  margin-top: 2rem;
+}
+
+
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+
+@media (max-width: 820px) {
+  #hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 75px;
+  }
+
+  .lottie-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

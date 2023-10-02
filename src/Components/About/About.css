@@ -1,0 +1,146 @@
+#about {
+    overflow-x: hidden;
+}
+
+#about h1 {
+    text-align: center;
+    margin-top: 10rem;
+    font-size: 50px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.about-inner {
+    width: 90%;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.about .col1 {
+    margin-top: 1rem;
+    font-weight: 800;
+    line-height: 1.5;
+    font-size: 17px;
+    width: 50vw;
+}
+
+.about .col2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about img {
+    width: auto;
+    max-height: 80%;
+    box-shadow: 2px 2px 15px #00ced1;
+}
+
+.about img:hover {
+    box-shadow: 0px 0px 0px;
+}
+
+.about .btn {
+    background-color: #00ced1;
+    color: #000000;
+    margin-top: 1.5rem;
+}
+
+.about .tab-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about .tab-buttons button,
+.col1 button {
+    background-color: #000000;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: none;
+    padding: 0.5rem;
+    transition: 0.3s;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.about .tab-buttons button.active {
+    background-color: #00ced1;
+    color: #000000;
+}
+
+.about .tab-buttons button:hover {
+    background-color: grey;
+}
+
+
+.education-item {
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: scale(1.1);
+}
+
+.education-year {
+    font-size: 17px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin-bottom: 2px;
+}
+
+.education-info {
+    margin-left: 10px;
+}
+
+.education-school {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #00ced1;
+}
+
+.education-details {
+    font-size: 16px;
+}
+
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+
+
+@media (max-width:1000px) {
+    .about-inner {
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about .col1 {
+        width: 90vw;
+        padding: 1rem;
+
+    }
+
+}

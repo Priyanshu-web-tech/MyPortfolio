@@ -1,0 +1,9 @@
+.marquee-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.marquee {         
+  font-size: 3.5rem;          
+  padding: 15px;    
+}

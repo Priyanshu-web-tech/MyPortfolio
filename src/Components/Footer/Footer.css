@@ -1,0 +1,30 @@
+.footer {
+    margin-top: 10rem;
+    overflow-x: hidden;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.connect {
+    margin-bottom: 1rem;
+}
+
+.connect i {
+    font-size: 20px;
+}
+
+.footer .connect a {
+    margin-left: 15px;
+}
+
+.footer .copyright a {
+    color: #00ced1;
+}
+
+.footer .connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
