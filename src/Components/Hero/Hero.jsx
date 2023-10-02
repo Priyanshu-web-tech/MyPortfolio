@@ -35,6 +35,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="hero-content"
         >
+          <div>
           <h2>Hi, I'm</h2>
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
@@ -51,6 +52,7 @@ const Hero = () => {
           >
             Your Front End Expert
           </motion.p>
+          </div>
         </motion.div>
       </motion.section>
     </>

@@ -37,7 +37,13 @@ const Skills = () => {
 
   return (
     <div id="skill-container" className="skill-container">
+       <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1,delay:0.2 }}
+    >
       <h1>My Skills</h1>
+    </motion.div>
       <div className="outer-container">
         <div className="container">
           <div className="tab">
@@ -65,7 +71,7 @@ const Skills = () => {
             style={{ minHeight: maxTabContentHeight + "px" }}
             whileInView={{ opacity: 1 }}
             initial={{opacity: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1 }}
             id="Development"
             className={`tabcontent ${
               activeTab === "Development" ? "active" : ""
@@ -89,7 +95,7 @@ const Skills = () => {
             style={{ minHeight: maxTabContentHeight + "px" }}
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             
             id="Programming"
             className={`tabcontent ${

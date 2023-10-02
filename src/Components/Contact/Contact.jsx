@@ -36,7 +36,13 @@ const Contact = () => {
 
   return (
     <div className="contact" id="contact">
-      <h1>Contact Me</h1>
+      <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1,delay:0.2 }}
+    >
+      <h1>Say Hello!</h1>
+    </motion.div>
       <div className="grid2">
         <div className="inner-container">
         <motion.div

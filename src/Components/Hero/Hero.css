@@ -51,7 +51,9 @@
   }
 
   .hero-content {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-content h1 {
