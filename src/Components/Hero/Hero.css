@@ -54,6 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 2.5rem;
   }
 
   .hero-content h1 {
