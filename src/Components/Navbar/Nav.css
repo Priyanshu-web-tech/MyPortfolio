@@ -2,18 +2,20 @@ nav {
   top: 0;
   z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem;
-  position: fixed;
-  width: 100%;
+  padding: 0.5rem;
+  position: sticky;
   background-color: #1E1E1F;
   transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
   opacity: 1;
-  font-size: 15px;
 }
 
-nav a{
+nav ul {
+  margin-right: 1.5rem;
+}
+
+nav ul a{
   padding: 1rem;
   font-size: 1rem;
   color: #fff;
@@ -21,7 +23,7 @@ nav a{
 }
 
 
-nav a::after {
+nav ul a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -29,16 +31,14 @@ nav a::after {
   bottom: 0;
   left: 0;
   background-color: #00ced1;
-  transition: width 1s ease; /* Transition effect for the width */
+  transition: width 1s ease;
 }
 
-/* Change the width of the line on hover */
-nav a:hover::after {
+nav ul a:hover::after {
   width: 100%;
 }
 
 nav a:hover{
-  font-weight: 800;
   color: #00ced1;
 }
 
@@ -48,7 +48,7 @@ nav.scrolling {
 
 .logo img{
   width: 3rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   transition: 0.3s ease;
 }
 
@@ -61,7 +61,6 @@ nav.scrolling {
   display: none;
   flex-direction: column;
   cursor: none;
-  margin-right: 1rem;
 }
 
 .bar {
@@ -71,12 +70,17 @@ nav.scrolling {
 
 .menu {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   
 }
 
+.right-icons a {
+  padding: 1rem;
+  font-size: 22px;
+}
 
-@media (max-width: 512px) {
+
+@media (max-width: 750px) {
   body.menu-open {
     overflow: hidden;
   }
@@ -98,17 +102,27 @@ nav.scrolling {
     z-index: 1000;
   }
 
-  
 
   .menu.active {
     transform: translateX(0);
     
   }
 
+  .logo{
+    order: 1;
+  }
+
   .menu-toggle {
+    order: 3;
     display: flex;
     top: 1rem;
     right: 1rem;
     z-index: 1001;
   }
+
+  .right-icons{
+    order: 1;
+    flex: auto;
+  }
+
 }

@@ -26,12 +26,11 @@ const Navbar = () => {
 
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.classList.add('menu-open');
+      document.body.classList.add("menu-open");
     } else {
-      document.body.classList.remove('menu-open');
+      document.body.classList.remove("menu-open");
     }
   }, [isMenuOpen]);
-  
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -43,21 +42,54 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={` ${scrolling ? 'scrolling' : ''}`}>
+      <nav className={` ${scrolling ? "scrolling" : ""}`}>
         <div className="logo">
           <img src={logo} alt="" />
         </div>
-        <div className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-          <img className="bar" id="toggle-icon" src={isMenuOpen ? close : open} alt="Menu" />
+        <div
+          className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+        >
+          <img
+            className="bar"
+            id="toggle-icon"
+            src={isMenuOpen ? close : open}
+            alt="Menu"
+          />
         </div>
 
-        <ul className={`menu ${isMenuOpen ? 'active' : ''}`}>
-          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-          <li><Link to="/aboutpg" onClick={closeMenu}>About</Link></li>
-          <li><Link to="/skillpg" onClick={closeMenu}>Skills</Link></li>
-          <li><Link to="/projectspg" onClick={closeMenu}>My Work</Link></li>
-          <li><Link to="/contactpg" onClick={closeMenu}>Contact</Link></li>
+        <ul className={`menu ${isMenuOpen ? "active" : ""}`}>
+          <li>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/aboutpg" onClick={closeMenu}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/skillpg" onClick={closeMenu}>
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link to="/projectspg" onClick={closeMenu}>
+              My Work
+            </Link>
+          </li>
+          <li>
+            <Link to="/contactpg" onClick={closeMenu}>
+              Contact
+            </Link>
+          </li>
         </ul>
+
+        <div className="right-icons">
+          <a target="_blank" href="mailto:priyanshusharma6666@gmail.com"><i className="fas fa-envelope"></i></a>
+          <a target="_blank" href="http://wa.me/918279707568"><i className="fab fa-whatsapp"></i></a>
+        </div>
       </nav>
     </>
   );

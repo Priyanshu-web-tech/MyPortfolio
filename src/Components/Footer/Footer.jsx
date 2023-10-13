@@ -36,7 +36,7 @@ const Footer = () => {
           href="https://twitter.com/Priyans72532451"
         >
           <motion.div whileHover={{ scale: 1.2 }}>
-            <i className="fab fa-twitter-square" />
+          <i class="fa-brands fa-square-x-twitter"></i>
           </motion.div>
         </a>
         <a

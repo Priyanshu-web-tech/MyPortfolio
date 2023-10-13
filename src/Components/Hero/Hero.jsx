@@ -25,7 +25,7 @@ const Hero = () => {
             loop
             play
             animationData={man}
-            style={{ width: 400,padding:"1rem"}}
+            style={{ width: '400px',padding:"1rem"}}
           />
         </motion.div>
 

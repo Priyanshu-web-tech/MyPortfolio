@@ -7,26 +7,22 @@
     text-align: center;
     overflow-x: hidden;
     overflow-y: hidden;
-    
 }
 
 .grid2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
 }
 
 .inner-container {
-    width: 90%;
-    padding: 2rem;
-    border-radius: 15px;
-    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #1E1F1E;
 }
+
 
 .inputs {
     display: flex;
@@ -42,7 +38,7 @@ textarea {
     color: black;
     padding: 1rem;
     margin-top: 1rem;
-    width: 80%;
+    width: 90%;
     font-weight: 600;
 }
 
@@ -66,30 +62,9 @@ textarea {
 }
 
 .grid2 h3 {
-    text-align: center;
     font-size: 1.5rem;
 }
 
-.cards {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.card {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    width: 35%;
-}
-
-.card p {
-    color: white;
-    font-size: 1rem;
-}
 
 .msg {
     color: #00ced1;
@@ -97,12 +72,17 @@ textarea {
     margin-top: 0.5rem;
 }
 
-@media (max-width:767px) {
+@media (max-width:760px) {
     .inner-container {
         display: flex;
         flex-direction: column;
     }
 
+    .column1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .inputs input,
     textarea {
         width: 100%;
