@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { motion } from "framer-motion";
+import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -15,10 +16,10 @@ const Footer = () => {
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="https://www.facebook.com/profile.php?id=100069703429860&mibextid=ZbWKwL"
+          href="https://github.com/Priyanshu-web-tech"
         >
           <motion.div whileHover={{ scale: 1.2 }}>
-            <i className="fab fa-facebook" />
+            <FaGithub size={20} />
           </motion.div>
         </a>
         <a
@@ -27,7 +28,7 @@ const Footer = () => {
           href="https://www.instagram.com/__priyanshu.sharma/"
         >
           <motion.div whileHover={{ scale: 1.2 }}>
-            <i className="fab fa-instagram" />
+            <FaInstagram size={20} />
           </motion.div>
         </a>
         <a
@@ -36,7 +37,7 @@ const Footer = () => {
           href="https://twitter.com/Priyans72532451"
         >
           <motion.div whileHover={{ scale: 1.2 }}>
-          <i class="fa-brands fa-square-x-twitter"></i>
+            <FaTwitter size={20} />
           </motion.div>
         </a>
         <a
@@ -45,7 +46,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/priyanshu-sharma-025737216/"
         >
           <motion.div whileHover={{ scale: 1.2 }}>
-            <i className="fab fa-linkedin" />
+            <FaLinkedin size={20} />
           </motion.div>
         </a>
       </motion.div>
@@ -56,14 +57,7 @@ const Footer = () => {
         initial={{ opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        Copyright &copy; 2023,All right reserved. Made by{" "}
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://github.com/Priyanshu-web-tech"
-        >
-          Priyanshu
-        </a>
+        Copyright &copy; 2023, All rights reserved. Made by <span>Priyanshu</span>
       </motion.p>
       <br />
     </div>

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-
 html,
 body {
   scroll-behavior: smooth;
@@ -24,4 +23,18 @@ a {
   text-decoration: none;
   cursor: none;
   color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #131212;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8B8C2;
+  border-radius: 10px;
 }

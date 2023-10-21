@@ -1,123 +1,53 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import {
+  FaHtml5,FaJs, FaReact,FaDatabase,FaPhp,FaPython,FaCuttlefish,} from "react-icons/fa6";
+import { BiLogoCPlusPlus,BiLogoCss3 } from "react-icons/bi";
 import "./Skills.css";
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState("Development");
-  const [maxTabContentHeight, setMaxTabContentHeight] = useState(0);
 
-  function openTab(tabName) {
-    setActiveTab(tabName);
-  }
+  const iconSize = {
+    fontSize: "4rem",
+  };
 
-  useEffect(() => {
-    document.getElementById("defaultOpen").click();
-  }, []);
-
-  const developmentSkills = [
-    { icon: "fab fa-html5", name: "HTML" },
-    { icon: "fab fa-css3", name: "CSS" },
-    { icon: "fab fa-js", name: "JavaScript" },
-    { icon: "fab fa-react", name: "React.js" },
-    { icon: "fas fa-database", name: "SQL" },
-    { icon: "fab fa-php", name: "PHP" },
+  const skills = [
+    { icon: <FaHtml5 style={iconSize} />, name: "HTML" },
+    { icon: <BiLogoCss3 style={iconSize} />, name: "CSS" },
+    { icon: <FaJs style={iconSize} />, name: "JavaScript" },
+    { icon: <FaReact style={iconSize} />, name: "React.js" },
+    { icon: <FaDatabase style={iconSize} />, name: "MySQL" },
+    { icon: <FaPhp style={iconSize} />, name: "PHP" },
+    { icon: <FaCuttlefish style={iconSize} />, name: "C" },
+    { icon: <BiLogoCPlusPlus style={iconSize} />, name: "C++" },
+    { icon: <FaPython style={iconSize} />, name: "Python" },
   ];
-
-  const programmingSkills = [
-    { icon: "fa-solid fa-c", name: "C++" },
-    { icon: "fa-solid fa-c", name: "C" },
-    { icon: "fab fa-python", name: "Python" },
-  ];
-
-  useEffect(() => {
-    const developmentHeight = document.getElementById("Development").offsetHeight;
-    const programmingHeight = document.getElementById("Programming").offsetHeight;
-    setMaxTabContentHeight(Math.max(developmentHeight, programmingHeight));
-  }, []);
 
   return (
     <div id="skill-container" className="skill-container">
-       <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1,delay:0.2 }}
-    >
-      <h1>My Skills</h1>
-    </motion.div>
-      <div className="outer-container">
-        <div className="container">
-          <div className="tab">
-            <button
-              id="defaultOpen"
-              className={`tablinks ${
-                activeTab === "Development" ? "active" : ""
-              }`}
-              onClick={() => openTab("Development")}
-            >
-              Development
-            </button>
-            
-            <button
-              className={`tablinks ${
-                activeTab === "Programming" ? "active" : ""
-              }`}
-              onClick={() => openTab("Programming")}
-            >
-              Programming
-            </button>
-          </div>
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        <h1>My Skills</h1>
+      </motion.div>
 
-          <motion.div
-            style={{ minHeight: maxTabContentHeight + "px" }}
-            whileInView={{ opacity: 1 }}
-            initial={{opacity: 0 }}
-            transition={{ duration: 1 }}
-            id="Development"
-            className={`tabcontent ${
-              activeTab === "Development" ? "active" : ""
-            }`}
-          >
-            <section id="skills">
-              <div className="skills-content">
-                <div className="skill-list">
-                  {developmentSkills.map((skill, index) => (
-                    <div className="skill" key={index}>
-                      <i className={skill.icon}></i>
-                      <p>{skill.name}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </motion.div>
-
-          <motion.div
-            style={{ minHeight: maxTabContentHeight + "px" }}
-            whileInView={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            
-            id="Programming"
-            className={`tabcontent ${
-              activeTab === "Programming" ? "active" : ""
-            }`}
-          >
-            <section id="skills">
-              <div className="skills-content">
-                <div className="skill-list">
-                  {programmingSkills.map((skill, index) => (
-                    <div className="skill" key={index}>
-                      <i className={skill.icon}></i>
-                      
-                      <p>{skill.name}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </motion.div>
-        </div>
-      </div>
+      <section className="outer-container">
+        <motion.div
+          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          className="skill-list"
+        >
+          {skills.map((skill, index) => (
+            <div className="skill" key={index}>
+              {skill.icon}
+              <p>{skill.name}</p>
+            </div>
+          ))}
+        </motion.div>
+      </section>
     </div>
   );
 };

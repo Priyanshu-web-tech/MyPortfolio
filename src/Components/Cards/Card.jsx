@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import {BsBoxArrowUpRight} from "react-icons/bs";
 
 const Card = (props) => {
   return (
@@ -10,7 +11,7 @@ const Card = (props) => {
           <h3>{props.name}</h3>
           <p>{props.intro}</p>
           <a rel="noopener noreferrer" href={props.link} target="_blank">
-            <i className="fas fa-external-link-alt"></i>
+          <BsBoxArrowUpRight/>
           </a>
         </div>
       </div>

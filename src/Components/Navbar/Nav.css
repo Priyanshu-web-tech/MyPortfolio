@@ -26,20 +26,18 @@ nav ul a{
 nav ul a::after {
   content: "";
   position: absolute;
-  width: 0;
+  width: 100%;
   height: 2px;
   bottom: 0;
   left: 0;
+  transform-origin: 50% 0; 
+  transform: scaleX(0); 
   background-color: #00ced1;
-  transition: width 1s ease;
+  transition: transform 0.5s ease;
 }
 
 nav ul a:hover::after {
-  width: 100%;
-}
-
-nav a:hover{
-  color: #00ced1;
+  transform: scaleX(1); 
 }
 
 nav.scrolling {
@@ -52,7 +50,7 @@ nav.scrolling {
   transition: 0.3s ease;
 }
 
-.logo img:hover{
+.logo img:hover,.right-icons{
   transform: scale(1.3);
 }
 
@@ -75,9 +73,10 @@ nav.scrolling {
 }
 
 .right-icons a {
-  padding: 1rem;
-  font-size: 22px;
+  padding: 8px;
+
 }
+
 
 
 @media (max-width: 750px) {
@@ -105,7 +104,6 @@ nav.scrolling {
 
   .menu.active {
     transform: translateX(0);
-    
   }
 
   .logo{
@@ -123,6 +121,6 @@ nav.scrolling {
   .right-icons{
     order: 1;
     flex: auto;
+    margin-left: 2rem;
   }
-
 }

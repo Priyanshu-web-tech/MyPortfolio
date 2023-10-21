@@ -9,7 +9,6 @@ const About = () => {
   function openTab(tabName) {
     setActiveTab(tabName);
   }
-  
 
   useEffect(() => {
     document.getElementById("defaultOpen").click();
@@ -36,18 +35,18 @@ const About = () => {
   return (
     <div id="about">
       <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1,delay:0.2 }}
-    >
-      <h1>About Me</h1>
-    </motion.div>
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        <h1>About Me</h1>
+      </motion.div>
       <motion.div
-      whileInView={{ x: 0 }}
-      initial={{ x: -100 }}
-      transition={{ duration: 0.6 }}
-      
-      className="about">
+        whileInView={{ x: 0 }}
+        initial={{ x: -100 }}
+        transition={{ duration: 0.6 }}
+        className="about"
+      >
         <div className="about-inner">
           <div className="col1">
             <div className="tab-buttons">
@@ -126,9 +125,7 @@ const About = () => {
               </ul>
             </motion.div>
           </div>
-          <div
-            className="col2"
-          >
+          <div className="col2">
             <img src={mypic} alt="" />
           </div>
         </div>

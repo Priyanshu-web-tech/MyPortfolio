@@ -4,6 +4,8 @@ import open from "../../Assets/open.png";
 import close from "../../Assets/close.png";
 import logo from "../../Assets/logo.png";
 import { Link } from "react-router-dom";
+import {FaWhatsapp} from "react-icons/fa";
+import {BiMailSend} from "react-icons/bi"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,8 +89,8 @@ const Navbar = () => {
         </ul>
 
         <div className="right-icons">
-          <a target="_blank" href="mailto:priyanshusharma6666@gmail.com"><i className="fas fa-envelope"></i></a>
-          <a target="_blank" href="http://wa.me/918279707568"><i className="fab fa-whatsapp"></i></a>
+          <a target="_blank" href="mailto:priyanshusharma6666@gmail.com"><BiMailSend size={"18px"}/></a>
+          <a target="_blank" href="http://wa.me/918279707568"><FaWhatsapp size={"18px"}/></a>
         </div>
       </nav>
     </>

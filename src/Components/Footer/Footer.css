@@ -11,15 +11,11 @@
     margin-bottom: 1rem;
 }
 
-.connect i {
-    font-size: 20px;
-}
-
 .footer .connect a {
     margin-left: 15px;
 }
 
-.footer .copyright a {
+.footer .copyright span {
     color: #00ced1;
 }
 
