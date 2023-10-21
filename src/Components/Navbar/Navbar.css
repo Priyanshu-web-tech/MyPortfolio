@@ -62,7 +62,7 @@ nav.scrolling {
 }
 
 .bar {
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .menu {
@@ -109,6 +109,8 @@ nav.scrolling {
     align-items: center;
     text-align: center;
     z-index: 1000;
+    gap: 2rem;
+
   }
 
 
