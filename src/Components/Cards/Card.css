@@ -19,8 +19,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  background: var(--light-gray);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,8 +37,12 @@
   text-align: center;
 }
 
+.overlay a,p{
+  color: #fff;
+}
+
 .overlay h3{
-  color: #00ced1;
+  color: var(--primary-color);
 }
 
 .overlay p{

@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./Nav.css";
+import "./Navbar.css";
 import open from "../../Assets/open.png";
 import close from "../../Assets/close.png";
 import logo from "../../Assets/logo.png";
+import lightlogo from "../../Assets/light-logo.png";
 import { Link } from "react-router-dom";
-import {FaWhatsapp} from "react-icons/fa";
-import {BiMailSend} from "react-icons/bi"
+import { FaWhatsapp, FaMoon, FaSun } from "react-icons/fa";
+import { BiMailSend } from "react-icons/bi";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const [isLightTheme, setIsLightTheme] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -34,6 +36,28 @@ const Navbar = () => {
     }
   }, [isMenuOpen]);
 
+  
+  useEffect(() => {
+    var savedTheme = localStorage.getItem("RPtheme");
+    if (savedTheme) {
+      document.body.classList.add(savedTheme);
+      setIsLightTheme(savedTheme === "light-theme"); 
+    }
+    const logoImg = document.getElementById("logo-img");
+    logoImg.src = isLightTheme ? lightlogo : logo;
+  }, [isLightTheme]);
+
+  const handleThemeToggle = () => {
+    const currentTheme = isLightTheme ? "" : "light-theme";
+    document.body.classList.toggle("light-theme");
+    localStorage.setItem("RPtheme", currentTheme);
+
+    setIsLightTheme(!isLightTheme); 
+
+    const logoImg = document.getElementById("logo-img");
+    logoImg.src = isLightTheme ? logo : lightlogo; 
+  };
+
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setScrolling(true);
@@ -46,7 +70,7 @@ const Navbar = () => {
     <>
       <nav className={` ${scrolling ? "scrolling" : ""}`}>
         <div className="logo">
-          <img src={logo} alt="" />
+          <img id="logo-img" src={logo} alt="" />
         </div>
         <div
           className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
@@ -88,9 +112,18 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className="right-icons">
-          <a target="_blank" href="mailto:priyanshusharma6666@gmail.com"><BiMailSend size={"18px"}/></a>
-          <a target="_blank" href="http://wa.me/918279707568"><FaWhatsapp size={"18px"}/></a>
+        <div>
+          <div className="right-icons">
+            <a target="_blank" href="mailto:priyanshusharma6666@gmail.com">
+              <BiMailSend size={"18px"} />
+            </a>
+            <a target="_blank" href="http://wa.me/918279707568">
+              <FaWhatsapp size={"18px"} />
+            </a>
+            <div id="switch-icon" onClick={handleThemeToggle}>
+              {isLightTheme ? <FaMoon /> : <FaSun />}
+            </div>
+          </div>
         </div>
       </nav>
     </>

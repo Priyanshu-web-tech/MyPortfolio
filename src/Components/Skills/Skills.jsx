@@ -25,11 +25,14 @@ const Skills = () => {
 
   return (
     <div id="skill-container" className="skill-container">
+      
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
+
       >
+
         <h1>My Skills</h1>
       </motion.div>
 

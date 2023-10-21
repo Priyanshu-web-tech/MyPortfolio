@@ -126,7 +126,7 @@ const About = () => {
             </motion.div>
           </div>
           <div className="col2">
-            <img src={mypic} alt="" />
+            <img className="pic" src={mypic} alt="" />
           </div>
         </div>
       </motion.div>

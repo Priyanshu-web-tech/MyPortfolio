@@ -5,6 +5,7 @@
 
 .footer p {
     text-align: center;
+    color: var(--white);
 }
 
 .connect {
@@ -16,7 +17,7 @@
 }
 
 .footer .copyright span {
-    color: #00ced1;
+    color: var(--primary-color);
 }
 
 .footer .connect {

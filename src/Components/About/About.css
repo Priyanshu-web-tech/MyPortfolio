@@ -4,7 +4,7 @@
 
 #about h1 {
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 3rem;
     font-size: 50px;
 }
 
@@ -30,6 +30,11 @@
     width: 50vw;
 }
 
+.about p{
+    color: var(--white);
+
+}
+
 .about .col2 {
     display: flex;
     align-items: center;
@@ -39,16 +44,13 @@
 .about img {
     width: auto;
     max-height: 80%;
-    box-shadow: 2px 2px 15px #00ced1;
+    box-shadow: 2px 2px 15px;
 }
 
-.about img:hover {
-    box-shadow: 0px 0px 0px;
-}
 
 .about .btn {
-    background-color: #00ced1;
-    color: #000000;
+    background-color:var(--primary-color);
+    color: var(--dark-black);
     margin-top: 1.5rem;
 }
 
@@ -61,9 +63,9 @@
 
 .about .tab-buttons button,
 .col1 button {
-    background-color: #000000;
+    background-color: var(--light-black);
     font-weight: 600;
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 5px;
     outline: none;
@@ -75,14 +77,9 @@
 }
 
 .about .tab-buttons button.active {
-    background-color: #00ced1;
-    color: #000000;
+    background-color: var(--primary-color);
+    color: var(--dark-black);
 }
-
-.about .tab-buttons button:hover {
-    background-color: grey;
-}
-
 
 .education-item {
     margin-bottom: 5px;
@@ -109,7 +106,7 @@
     font-size: 17px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #00ced1;
+    color: var(--primary-color);
 }
 
 .education-details {

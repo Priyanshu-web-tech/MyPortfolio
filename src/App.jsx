@@ -18,10 +18,10 @@ function App() {
         outerAlpha={0}
         hasBlendMode={true}
         innerStyle={{
-          backgroundColor: "white",
+          backgroundColor: "var(--white)",
         }}
         outerStyle={{
-          border: "3px solid white",
+          border: "3px solid var(--white)",
         }}
         clickables={[
           "a",
@@ -39,7 +39,6 @@ function App() {
           "p",
         ]}
       />
-
 
         <Router>
           <Routes>

@@ -11,14 +11,34 @@ import Marquee from "../Components/Marquee/Marquee";
 const Home = () => {
   return (
     <div>
-        <Navbar />
-        <Hero />
-        <Marquee />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
+      <Navbar />
+      <Hero />
+      <Marquee />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <About />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Skills />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Projects />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Contact />
+      <Footer />
     </div>
   );
 };

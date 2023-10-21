@@ -1,25 +1,23 @@
 nav {
+  padding: 0.5rem;
   top: 0;
   z-index: 100;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0.5rem;
   position: sticky;
-  background-color: #1E1E1F;
+  background-color: var(--light-black);
   transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
   opacity: 1;
 }
 
-nav ul {
-  margin-right: 1.5rem;
-}
-
-nav ul a{
-  padding: 1rem;
+nav ul a {
+  padding: 20px;
   font-size: 1rem;
-  color: #fff;
+  font-weight: 600;
+  color: var(--white);
   position: relative;
+  opacity: 0.7;
 }
 
 
@@ -30,30 +28,32 @@ nav ul a::after {
   height: 2px;
   bottom: 0;
   left: 0;
-  transform-origin: 50% 0; 
-  transform: scaleX(0); 
-  background-color: #00ced1;
+  transform-origin: 50% 0;
+  transform: scaleX(0);
+  background-color: var(--primary-color);
   transition: transform 0.5s ease;
 }
 
 nav ul a:hover::after {
-  transform: scaleX(1); 
+  transform: scaleX(1);
+}
+
+nav ul a:hover{
+  opacity: 1;
 }
 
 nav.scrolling {
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 
-.logo img{
+.logo img {
   width: 3rem;
-  margin-left: 1rem;
   transition: 0.3s ease;
 }
 
-.logo img:hover,.right-icons{
+.logo img:hover {
   transform: scale(1.3);
 }
-
 
 .menu-toggle {
   display: none;
@@ -62,22 +62,32 @@ nav.scrolling {
 }
 
 .bar {
-  width: 40px;
-  height: 40px;
+  width: 3rem;
 }
 
 .menu {
   display: flex;
-  gap: 2rem;
-  
-}
-
-.right-icons a {
-  padding: 8px;
 
 }
 
+.right-icons {
+  margin-right: 1rem;
+  padding: 10px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  transform: scale(1.2);
+}
 
+.right-icons a,
+.right-icons div {
+  opacity: 0.7;
+}
+
+.right-icons a:hover,
+.right-icons div:hover {
+  opacity: 1;
+}
 
 @media (max-width: 750px) {
   body.menu-open {
@@ -93,7 +103,7 @@ nav.scrolling {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #111;
+    background-color: var(--dark-black);
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     align-items: center;
@@ -106,21 +116,20 @@ nav.scrolling {
     transform: translateX(0);
   }
 
-  .logo{
-    order: 1;
+  .logo {
+    order: 0;
   }
 
   .menu-toggle {
-    order: 3;
+    order: 2;
     display: flex;
     top: 1rem;
     right: 1rem;
     z-index: 1001;
   }
 
-  .right-icons{
-    order: 1;
-    flex: auto;
-    margin-left: 2rem;
+  .right-icons {
+    order: 0;
+    margin-right: 0;
   }
 }

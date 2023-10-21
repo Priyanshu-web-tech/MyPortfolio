@@ -1,6 +1,6 @@
 .skill-container h1 {
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 3rem;
     font-size: 50px;
 }
 
@@ -22,14 +22,14 @@
 .skill {
     text-align: center;
     flex: 1 1 calc(33.33% - 20px);
-    background-color: rgb(12, 129, 129);
+    background-color: var(--secondary-color);
     padding: 20px;
     border-radius: 10px;
     font-weight: bold;
 }
 
 .skill:hover {
-    outline: 1px solid #00ced1; 
+    outline: 1px solid var(--primary-color); 
     transition: background-color 0.3s ease, outline 0.3s ease, box-shadow 0.3s ease; 
     background-color: transparent;
 }
