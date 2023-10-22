@@ -71,9 +71,10 @@ const Contact = () => {
           >
             <h3>Write Your Query</h3>
             <div className="inputs">
-              <input name="name" type="text" placeholder="Full Name" required />
-              <input name="mail" type="email" placeholder="Email" required />
+              <input autoComplete="on" name="name" type="text" placeholder="Full Name" required />
+              <input autoComplete="on" name="mail" type="email" placeholder="Email" required />
               <textarea
+              autoComplete="on"
                 name="message"
                 className="message"
                 type="text"

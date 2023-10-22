@@ -1,0 +1,32 @@
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size: 90px;
+    text-align: center;
+    font-style: italic;
+    animation:fadeInOut 2s infinite;
+}
+
+#content{
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

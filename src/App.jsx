@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home.jsx";
+import Home from "./Pages/Home/Home.jsx";
 import ProjectsPg from "./Pages/Projects.jsx";
 import AboutPg from "./Pages/AboutPg.jsx";
 import AnimatedCursor from "react-animated-cursor";
