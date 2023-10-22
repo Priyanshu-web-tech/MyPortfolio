@@ -2,15 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     font-size: 90px;
     text-align: center;
     font-style: italic;
     animation:fadeInOut 2s infinite;
-}
-
-#content{
-    animation: fadeIn 2s forwards;
+    background-color: var(--background-color);
+    color: var(--color);
 }
 
 @keyframes fadeInOut {
@@ -20,6 +18,10 @@
     50% {
         opacity: 1;
     }
+}
+
+#content{
+    animation: fadeIn 2s forwards;
 }
 
 @keyframes fadeIn {

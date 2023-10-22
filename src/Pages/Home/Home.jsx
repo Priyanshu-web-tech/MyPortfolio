@@ -10,7 +10,6 @@ import Marquee from "../../Components/Marquee/Marquee";
 import "./Home.css";
 
 const Home = () => {
-
   // Range Array
   const ranges = [[0, 0]];
   for (let i = 10; i <= 100; i += 10) {
@@ -18,7 +17,6 @@ const Home = () => {
   }
   ranges.push([100, 100]);
 
-  
   let currentIndex = 0;
   const [loading, setLoading] = useState(true);
 
@@ -28,7 +26,7 @@ const Home = () => {
   }
 
   useEffect(() => {
-    const loader = document.querySelector("#loader"); 
+    const loader = document.querySelector("#loader");
 
     function updateLoader() {
       if (currentIndex < ranges.length) {
@@ -44,7 +42,7 @@ const Home = () => {
           }
           currentIndex++;
           updateLoader(); //Recursion use to re-call till range!=index
-        }, 500);
+        }, Math.floor(Math.random() * 1200));
       }
     }
 

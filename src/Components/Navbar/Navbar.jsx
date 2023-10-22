@@ -13,6 +13,26 @@ const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isLightTheme, setIsLightTheme] = useState(false);
 
+  useEffect(() => {
+    var savedTheme = localStorage.getItem("RPtheme");
+    if (savedTheme) 
+      setIsLightTheme(savedTheme === "light-theme"); 
+    
+    const logoImg = document.getElementById("logo-img");
+    logoImg.src = isLightTheme ? lightlogo : logo;
+  }, [isLightTheme]);
+
+  const handleThemeToggle = () => {
+    const currentTheme = isLightTheme ? "" : "light-theme";
+    document.body.classList.toggle("light-theme");
+    localStorage.setItem("RPtheme", currentTheme);
+
+    setIsLightTheme(!isLightTheme); 
+
+    const logoImg = document.getElementById("logo-img");
+    logoImg.src = isLightTheme ? logo : lightlogo; 
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -35,28 +55,6 @@ const Navbar = () => {
       document.body.classList.remove("menu-open");
     }
   }, [isMenuOpen]);
-
-  
-  useEffect(() => {
-    var savedTheme = localStorage.getItem("RPtheme");
-    if (savedTheme) {
-      document.body.classList.add(savedTheme);
-      setIsLightTheme(savedTheme === "light-theme"); 
-    }
-    const logoImg = document.getElementById("logo-img");
-    logoImg.src = isLightTheme ? lightlogo : logo;
-  }, [isLightTheme]);
-
-  const handleThemeToggle = () => {
-    const currentTheme = isLightTheme ? "" : "light-theme";
-    document.body.classList.toggle("light-theme");
-    localStorage.setItem("RPtheme", currentTheme);
-
-    setIsLightTheme(!isLightTheme); 
-
-    const logoImg = document.getElementById("logo-img");
-    logoImg.src = isLightTheme ? logo : lightlogo; 
-  };
 
   const handleScroll = () => {
     if (window.scrollY > 0) {

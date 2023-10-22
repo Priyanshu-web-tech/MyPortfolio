@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home.jsx";
 import ProjectsPg from "./Pages/Projects.jsx";
@@ -8,8 +8,16 @@ import ContactPg from "./Pages/ContactPg.jsx";
 import SkillPg from "./Pages/SkillPg.jsx";
 
 function App() {
+
+  useEffect(() => {
+    var savedTheme = localStorage.getItem("RPtheme");
+    if (savedTheme) {
+      document.body.classList.add(savedTheme);
+    }
+  }, );
+
   return (
-    <div className="App">
+    <div>
       <AnimatedCursor
         innerSize={8}
         outerSize={35}
