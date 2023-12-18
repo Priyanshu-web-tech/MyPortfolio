@@ -4,6 +4,8 @@ import {
   FaHtml5,FaJs, FaReact,FaDatabase,FaPhp,FaPython,FaCuttlefish,} from "react-icons/fa6";
 import { BiLogoCPlusPlus,BiLogoCss3 } from "react-icons/bi";
 import "./Skills.css";
+import Transition from "../Transition/Transition";
+
 
 const Skills = () => {
 
@@ -55,4 +57,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Transition(Skills);

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { motion } from "framer-motion";
-import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaXTwitter, FaLinkedin } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -37,7 +37,7 @@ const Footer = () => {
           href="https://twitter.com/Priyans72532451"
         >
           <motion.div whileHover={{ scale: 1.2 }}>
-            <FaTwitter size={20} />
+            <FaXTwitter size={20} />
           </motion.div>
         </a>
         <a

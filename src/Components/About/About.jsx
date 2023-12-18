@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import mypic from "../../Assets/mypic.jpg";
 import { motion } from "framer-motion";
 import "./About.css";
+import Transition from "../Transition/Transition";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -134,4 +135,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Transition(About);

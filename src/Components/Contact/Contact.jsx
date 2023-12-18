@@ -4,6 +4,7 @@ import "./Contact.css";
 import { motion } from "framer-motion";
 import LottiePlayer from "react-lottie-player";
 import contact from "../../Assets/contact.json";
+import Transition from "../Transition/Transition";
 
 const Contact = () => {
   const form = useRef();
@@ -101,4 +102,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Transition(Contact);
