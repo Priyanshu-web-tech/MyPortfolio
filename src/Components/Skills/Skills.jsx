@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaHtml5,FaJs, FaReact,FaDatabase,FaPhp,FaPython,FaCuttlefish,} from "react-icons/fa6";
+  FaHtml5,FaJs, FaReact,FaDatabase,FaPhp,FaPython,FaCuttlefish, FaNode,} from "react-icons/fa6";
 import { BiLogoCPlusPlus,BiLogoCss3 } from "react-icons/bi";
+import { SiExpress, SiMongodb } from "react-icons/si";
+
 import "./Skills.css";
 import Transition from "../Transition/Transition";
 
@@ -18,11 +20,15 @@ const Skills = () => {
     { icon: <BiLogoCss3 style={iconSize} />, name: "CSS" },
     { icon: <FaJs style={iconSize} />, name: "JavaScript" },
     { icon: <FaReact style={iconSize} />, name: "React.js" },
+    { icon: <FaNode style={iconSize} />, name: "Node" },
+    { icon: <SiExpress style={iconSize} />, name: "Express" },
+    { icon: <SiMongodb style={iconSize} />, name: "MongoDB" },
     { icon: <FaDatabase style={iconSize} />, name: "MySQL" },
-    { icon: <FaPhp style={iconSize} />, name: "PHP" },
+    { icon: <FaPython style={iconSize} />, name: "Python" },
     { icon: <FaCuttlefish style={iconSize} />, name: "C" },
     { icon: <BiLogoCPlusPlus style={iconSize} />, name: "C++" },
-    { icon: <FaPython style={iconSize} />, name: "Python" },
+   
+
   ];
 
   return (
