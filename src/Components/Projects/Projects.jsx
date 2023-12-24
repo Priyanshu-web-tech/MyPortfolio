@@ -8,8 +8,25 @@ import Second from "../../Assets/second.jpg";
 import third from "../../Assets/third.jpg";
 import fourth from "../../Assets/fourth.jpg";
 import fifth from "../../Assets/fifth.jpg";
+import property from "../../Assets/property.jpg";
+import job from "../../Assets/job.jpg";
+
 
 const projectData = [
+  {
+    name: "CareerSync",
+    intro:
+      "MERN stack powered job platform connecting seekers and employers, streamlining applications.",
+    link: "https://careersync-kkl7.onrender.com/",
+    image: job,
+  },
+  {
+    name: "PropertyPulse",
+    intro:
+      "Full Stack Property Listing application-simplifying property search and transactions",
+    link: "https://propertypulse-lz02.onrender.com/",
+    image: property,
+  },
   {
     name: "BitMap",
     intro:
