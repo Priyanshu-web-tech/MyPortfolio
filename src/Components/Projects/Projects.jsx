@@ -3,14 +3,6 @@ import Card from "../Cards/Card";
 import "./Projects.css";
 import { motion } from "framer-motion";
 import Transition from "../Transition/Transition";
-import First from "../../Assets/first.jpg";
-import Second from "../../Assets/second.jpg";
-import third from "../../Assets/third.jpg";
-import fourth from "../../Assets/fourth.jpg";
-import fifth from "../../Assets/fifth.jpg";
-import property from "../../Assets/property.jpg";
-import job from "../../Assets/job.jpg";
-
 
 const projectData = [
   {
@@ -18,49 +10,49 @@ const projectData = [
     intro:
       "MERN stack powered job platform connecting seekers and employers, streamlining applications.",
     link: "https://careersync-kkl7.onrender.com/",
-    image: job,
+    image: "Portfolio/job.jpg",
   },
   {
     name: "PropertyPulse",
     intro:
       "Full Stack Property Listing application-simplifying property search and transactions",
     link: "https://propertypulse-lz02.onrender.com/",
-    image: property,
+    image: "Portfolio/property.jpg",
   },
   {
     name: "BitMap",
     intro:
       "A CryptoCurrency Tracker providing updated information about different cryptocurrencies.",
     link: "https://bit-map.netlify.app/",
-    image: First,
+    image: "Portfolio/first.jpg",
   },
   {
     name: "PresentSeek",
     intro:
       "Attendance Management System with advanced facilities like attendance prediction",
     link: "https://github.com/Priyanshu-web-tech/PresentSeek",
-    image: Second,
+    image: "Portfolio/second.jpg",
   },
   {
     name: "My Gallery",
     intro:
       "Image Gallery build with Unsplash API to provide images based on entered topic",
     link: "https://wondrous-pixie-fe47ad.netlify.app/",
-    image: third,
+    image: "Portfolio/third.jpg",
   },
   {
     name: "Memory Quest",
     intro:
       "Memory Quest is an engaging memory game where you race against the clock to match pairs of cards. Test your memory skills, achieve the best score, and immerse yourself in the challenge.",
     link: "https://memory-quest.netlify.app/",
-    image: fourth,
+    image: "Portfolio/fourth.jpg",
   },
   {
     name: "GitHub Profile Viewer",
     intro:
       "A GitHub Profile View,It fetches details from GitHub API and present you in visually appealing manner",
     link: "https://github-prviewer.netlify.app/",
-    image: fifth,
+    image: "Portfolio/fifth.jpg",
   },
 ];
 

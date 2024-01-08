@@ -10,23 +10,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@emailjs/browser": "^3.11.0",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.17.9",
+    "imagekitio-react": "^3.0.0",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
+    "react-icons": "^4.12.0",
     "react-lottie-player": "^1.5.5",
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react": "^7.32.2",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.5"
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.0.8"
   }
 }

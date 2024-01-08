@@ -1,137 +1,137 @@
-nav {
-  padding: 0.5rem;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: sticky;
-  background-color: var(--light-black);
-  transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
-  opacity: 1;
-}
+  nav {
+    padding: 0.5rem;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    background-color: var(--light-black);
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    opacity: 1;
+  }
 
-nav ul a {
-  padding: 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--white);
-  position: relative;
-  opacity: 0.7;
-}
+  nav ul a {
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    position: relative;
+    opacity: 0.7;
+  }
 
 
-nav ul a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  transform-origin: 50% 0;
-  transform: scaleX(0);
-  background-color: var(--primary-color);
-  transition: transform 0.5s ease;
-}
+  nav ul a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scaleX(0);
+    background-color: var(--primary-color);
+    transition: transform 0.5s ease;
+  }
 
-nav ul a:hover::after {
-  transform: scaleX(1);
-}
+  nav ul a:hover::after {
+    transform: scaleX(1);
+  }
 
-nav ul a:hover{
-  opacity: 1;
-}
+  nav ul a:hover{
+    opacity: 1;
+  }
 
-nav.scrolling {
-  opacity: 0.8;
-}
+  nav.scrolling {
+    opacity: 0.8;
+  }
 
-.logo img {
-  width: 3rem;
-  transition: 0.3s ease;
-}
+  .logo img {
+    width: 3rem;
+    transition: 0.3s ease;
+  }
 
-.logo img:hover {
-  transform: scale(1.3);
-}
+  .logo img:hover {
+    transform: scale(1.3);
+  }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: none;
-}
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: none;
+  }
 
-.bar {
-  width: 2.5rem;
-}
-
-.menu {
-  display: flex;
-
-}
-
-.right-icons {
-  margin-right: 1rem;
-  padding: 10px;
-  gap: 1rem;
-  display: flex;
-  flex-direction: row;
-  transform: scale(1.2);
-}
-
-.right-icons a,
-.right-icons div {
-  opacity: 0.7;
-}
-
-.right-icons a:hover,
-.right-icons div:hover {
-  opacity: 1;
-}
-
-@media (max-width: 750px) {
-  body.menu-open {
-    overflow: hidden;
+  .bar {
+    width: 2.5rem;
   }
 
   .menu {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--dark-black);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    align-items: center;
-    text-align: center;
-    z-index: 1000;
-    gap: 2rem;
 
-  }
-
-
-  .menu.active {
-    transform: translateX(0);
-  }
-
-  .logo {
-    order: 0;
-  }
-
-  .menu-toggle {
-    order: 2;
-    display: flex;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1001;
   }
 
   .right-icons {
-    order: 0;
-    margin-right: 0;
+    margin-right: 1rem;
+    padding: 10px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    transform: scale(1.2);
   }
-}
+
+  .right-icons a,
+  .right-icons div {
+    opacity: 0.7;
+  }
+
+  .right-icons a:hover,
+  .right-icons div:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 750px) {
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--dark-black);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      align-items: center;
+      text-align: center;
+      z-index: 1000;
+      gap: 2rem;
+
+    }
+
+
+    .menu.active {
+      transform: translateX(0);
+    }
+
+    .logo {
+      order: 0;
+    }
+
+    .menu-toggle {
+      order: 2;
+      display: flex;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1001;
+    }
+
+    .right-icons {
+      order: 0;
+      margin-right: 0;
+    }
+  }

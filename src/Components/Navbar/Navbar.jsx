@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import open from "../../Assets/open.png";
-import close from "../../Assets/close.png";
-import logo from "../../Assets/logo.png";
-import lightlogo from "../../Assets/light-logo.png";
 import { Link } from "react-router-dom";
 import { FaWhatsapp, FaMoon, FaSun } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
+import { IKImage } from "imagekitio-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [isLightTheme, setIsLightTheme] = useState(false);
+  const lightlogo = "Portfolio/light-logo.png";
+  const logo = "Portfolio/logo.png";
+  const open = "Portfolio/open.png";
+  const close = "Portfolio/close.png";
 
   useEffect(() => {
     var savedTheme = localStorage.getItem("RPtheme");
-    if (savedTheme) 
-      setIsLightTheme(savedTheme === "light-theme"); 
-    
-    const logoImg = document.getElementById("logo-img");
-    logoImg.src = isLightTheme ? lightlogo : logo;
+    if (savedTheme) setIsLightTheme(savedTheme === "light-theme");
   }, [isLightTheme]);
 
   const handleThemeToggle = () => {
@@ -27,10 +24,7 @@ const Navbar = () => {
     document.body.classList.toggle("light-theme");
     localStorage.setItem("RPtheme", currentTheme);
 
-    setIsLightTheme(!isLightTheme); 
-
-    const logoImg = document.getElementById("logo-img");
-    logoImg.src = isLightTheme ? logo : lightlogo; 
+    setIsLightTheme(!isLightTheme);
   };
 
   const toggleMenu = () => {
@@ -68,17 +62,21 @@ const Navbar = () => {
     <>
       <nav className={` ${scrolling ? "scrolling" : ""}`}>
         <div className="logo">
-          <img id="logo-img" src={logo} alt="" />
+          <Link to="/">
+            <IKImage
+              id="logo-img"
+              path={`${isLightTheme ? lightlogo : logo}`}
+            />
+          </Link>
         </div>
         <div
           className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
           onClick={toggleMenu}
         >
-          <img
+          <IKImage
             className="bar"
             id="toggle-icon"
-            src={isMenuOpen ? close : open}
-            alt="Menu"
+            path={isMenuOpen ? close : open}
           />
         </div>
 

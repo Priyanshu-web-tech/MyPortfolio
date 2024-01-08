@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import mypic from "../../Assets/mypic.jpg";
 import { motion } from "framer-motion";
 import "./About.css";
 import Transition from "../Transition/Transition";
+import { IKImage } from "imagekitio-react";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -127,7 +127,7 @@ const About = () => {
             </motion.div>
           </div>
           <div className="col2">
-            <img className="pic" src={mypic} alt="" />
+            <IKImage className="pic" path="Portfolio/mypic.jpg" />
           </div>
         </div>
       </motion.div>

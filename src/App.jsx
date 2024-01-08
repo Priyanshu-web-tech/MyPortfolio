@@ -8,7 +8,8 @@ import Projects from "./Components/Projects/Projects.jsx";
 import About from "./Components/About/About.jsx";
 import Skills from "./Components/Skills/Skills.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
-import "./App.css"
+import "./App.css";
+import { IKContext } from "imagekitio-react";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -73,51 +74,53 @@ const App = () => {
   }
 
   return (
-    <div>
-      <AnimatedCursor
-        innerSize={8}
-        outerSize={35}
-        innerScale={1}
-        outerScale={2}
-        outerAlpha={0}
-        hasBlendMode={true}
-        innerStyle={{
-          backgroundColor: "var(--white)",
-        }}
-        outerStyle={{
-          border: "3px solid var(--white)",
-        }}
-        clickables={[
-          "a",
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          "label[for]",
-          "select",
-          "textarea",
-          "button",
-          ".link",
-          "h1",
-          "p",
-        ]}
-      />
+    <IKContext urlEndpoint="https://ik.imagekit.io/pz4meracm">
+      <div>
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={35}
+          innerScale={1}
+          outerScale={2}
+          outerAlpha={0}
+          hasBlendMode={true}
+          innerStyle={{
+            backgroundColor: "var(--white)",
+          }}
+          outerStyle={{
+            border: "3px solid var(--white)",
+          }}
+          clickables={[
+            "a",
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            "label[for]",
+            "select",
+            "textarea",
+            "button",
+            ".link",
+            "h1",
+            "p",
+          ]}
+        />
 
-      <Navbar />
+        <Navbar />
 
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route index element={<Home />} />
-          <Route path="/projectspg" element={<Projects />} />
-          <Route path="/aboutpg" element={<About />} />
-          <Route path="/skillpg" element={<Skills />} />
-          <Route path="/contactpg" element={<Contact />} />
-        </Routes>
-      </AnimatePresence>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route index element={<Home />} />
+            <Route path="/projectspg" element={<Projects />} />
+            <Route path="/aboutpg" element={<About />} />
+            <Route path="/skillpg" element={<Skills />} />
+            <Route path="/contactpg" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </IKContext>
   );
 };
 
