@@ -34,25 +34,11 @@ const projectData = [
     image: "Portfolio/second.jpg",
   },
   {
-    name: "My Gallery",
-    intro:
-      "Image Gallery build with Unsplash API to provide images based on entered topic",
-    link: "https://wondrous-pixie-fe47ad.netlify.app/",
-    image: "Portfolio/third.jpg",
-  },
-  {
     name: "Memory Quest",
     intro:
       "Memory Quest is an engaging memory game where you race against the clock to match pairs of cards. Test your memory skills, achieve the best score, and immerse yourself in the challenge.",
     link: "https://memory-quest.netlify.app/",
     image: "Portfolio/fourth.jpg",
-  },
-  {
-    name: "GitHub Profile Viewer",
-    intro:
-      "A GitHub Profile View,It fetches details from GitHub API and present you in visually appealing manner",
-    link: "https://github-prviewer.netlify.app/",
-    image: "Portfolio/fifth.jpg",
   },
 ];
 
@@ -73,13 +59,19 @@ const Projects = () => {
         className="work-list"
       >
         {projectData.map((project, index) => (
-          <Card
+          <motion.div
             key={index}
-            name={project.name}
-            intro={project.intro}
-            link={project.link}
-            image={project.image}
-          />
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
+          >
+            <Card
+              name={project.name}
+              intro={project.intro}
+              link={project.link}
+              image={project.image}
+            />
+          </motion.div>
         ))}
       </motion.div>
     </div>
