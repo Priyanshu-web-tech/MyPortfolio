@@ -9,14 +9,14 @@ const projectData = [
     name: "CareerSync",
     intro:
       "MERN stack powered job platform connecting seekers and employers, streamlining applications.",
-    link: "https://careersync-kkl7.onrender.com/",
+    link: "career-sync-gamma.vercel.app",
     image: "Portfolio/job.jpg",
   },
   {
     name: "PropertyPulse",
     intro:
       "Full Stack Property Listing application-simplifying property search and transactions",
-    link: "https://propertypulse-lz02.onrender.com/",
+    link: "property-pulse-seven.vercel.app",
     image: "Portfolio/property.jpg",
   },
   {

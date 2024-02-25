@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-:root{
+:root {
   --background-color: #131212;
   --primary-color: #00ced1;
   --secondary-color: #0C8181;
@@ -9,7 +9,7 @@
   --dark-black: #111;
   --transparent: transparent;
   --white: #fff;
-  --lg:#5F5E5F;
+  --lg: #5F5E5F;
 }
 
 
@@ -18,7 +18,7 @@
   --light-black: #f0f0f0;
   --dark-black: #fff;
   --white: #111;
-  --lg:#d1cfcf;
+  --lg: #d1cfcf;
 }
 
 html,
