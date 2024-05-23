@@ -1,0 +1,49 @@
+.marquee-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+}
+
+.marquee {
+  font-size: 4rem;
+  padding: 15px;
+  white-space: nowrap; 
+  animation-duration: 15s; 
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee p {
+  color: var(--white);
+}
+
+
+.marquee.left {
+  animation-name: marqueeLeft;
+}
+
+.marquee.right {
+  animation-name: marqueeRight;
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}

@@ -10,16 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "@emailjs/browser": "^3.11.0",
     "framer-motion": "^10.17.9",
-    "imagekitio-react": "^3.0.0",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-lottie-player": "^1.5.5",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.1",
+    "react-vertical-timeline-component": "^3.6.0",
+    "swiper": "^11.1.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

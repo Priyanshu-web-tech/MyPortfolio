@@ -12,7 +12,6 @@
   --lg: #5F5E5F;
 }
 
-
 .light-theme {
   --background-color: #fff;
   --light-black: #f0f0f0;
@@ -20,6 +19,7 @@
   --white: #111;
   --lg: #d1cfcf;
 }
+
 
 html,
 body {
@@ -29,12 +29,13 @@ body {
 }
 
 * {
-  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   user-select: none;
   transition: background-color 0.3s ease-in-out;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 ul {
@@ -63,4 +64,14 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #828284;
+}
+
+/* The line */
+.vertical-timeline.vertical-timeline-custom-line::before {
+  background: var(--white);
+}
+
+/* Icon container's border */
+.vertical-timeline.vertical-timeline-custom-line .vertical-timeline-element--work .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px var(--secondary-color), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }

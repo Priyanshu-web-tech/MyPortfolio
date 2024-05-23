@@ -3,19 +3,18 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { FaWhatsapp, FaMoon, FaSun } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
-import { IKImage } from "imagekitio-react";
+import { CgMenuGridR } from "react-icons/cg";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [isLightTheme, setIsLightTheme] = useState(false);
-  const lightlogo = "Portfolio/light-logo.png";
-  const logo = "Portfolio/logo.png";
-  const open = "Portfolio/open.png";
-  const close = "Portfolio/close.png";
+  const lightlogo = "https://ik.imagekit.io/pz4meracm/Portfolio/light-logo.png";
+  const logo = "https://ik.imagekit.io/pz4meracm/Portfolio/logo.png";
 
   useEffect(() => {
-    var savedTheme = localStorage.getItem("RPtheme");
+    const savedTheme = localStorage.getItem("RPtheme");
     if (savedTheme) setIsLightTheme(savedTheme === "light-theme");
   }, [isLightTheme]);
 
@@ -63,9 +62,10 @@ const Navbar = () => {
       <nav className={` ${scrolling ? "scrolling" : ""}`}>
         <div className="logo">
           <Link to="/">
-            <IKImage
+            <img
               id="logo-img"
-              path={`${isLightTheme ? lightlogo : logo}`}
+              src={`${isLightTheme ? lightlogo : logo}`}
+              alt=""
             />
           </Link>
         </div>
@@ -73,37 +73,33 @@ const Navbar = () => {
           className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
           onClick={toggleMenu}
         >
-          <IKImage
-            className="bar"
-            id="toggle-icon"
-            path={isMenuOpen ? close : open}
-          />
+          {isMenuOpen ? <IoCloseSharp /> : <CgMenuGridR />}
         </div>
 
         <ul className={`menu ${isMenuOpen ? "active" : ""}`}>
           <li>
             <Link to="/" onClick={closeMenu}>
-              Home
+              HOME
             </Link>
           </li>
           <li>
             <Link to="/aboutpg" onClick={closeMenu}>
-              About
+              ABOUT
             </Link>
           </li>
           <li>
             <Link to="/skillpg" onClick={closeMenu}>
-              Skills
+              SKILLS
             </Link>
           </li>
           <li>
             <Link to="/projectspg" onClick={closeMenu}>
-              My Work
+              MY WORK
             </Link>
           </li>
           <li>
             <Link to="/contactpg" onClick={closeMenu}>
-              Contact
+              CONTACT
             </Link>
           </li>
         </ul>

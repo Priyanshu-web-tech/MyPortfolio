@@ -20,7 +20,6 @@
     opacity: 0.7;
   }
 
-
   nav ul a::after {
     content: "";
     position: absolute;
@@ -38,12 +37,12 @@
     transform: scaleX(1);
   }
 
-  nav ul a:hover{
+  nav ul a:hover {
     opacity: 1;
   }
 
   nav.scrolling {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   .logo img {
@@ -61,13 +60,8 @@
     cursor: none;
   }
 
-  .bar {
-    width: 2.5rem;
-  }
-
   .menu {
     display: flex;
-
   }
 
   .right-icons {
@@ -102,17 +96,16 @@
       top: 0;
       left: 0;
       width: 100%;
+      margin-top: 4rem;
       height: 100%;
       background-color: var(--dark-black);
-      transform: translateX(-100%);
-      transition: transform 0.3s ease-in-out;
+      transform: translate(-100%, -10%);
+      transition: transform 400ms ease-in-out;
       align-items: center;
       text-align: center;
       z-index: 1000;
-      gap: 2rem;
-
+      gap: 4rem;
     }
-
 
     .menu.active {
       transform: translateX(0);
@@ -127,6 +120,8 @@
       display: flex;
       top: 1rem;
       right: 1rem;
+
+      font-size: 1.8rem;
       z-index: 1001;
     }
 

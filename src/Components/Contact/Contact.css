@@ -47,18 +47,34 @@ textarea {
 }
 
 .inputs .btn {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 0.8em 1.3em 0.8em 0.9em;
     background-color: var(--primary-color);
     color: var(--dark-black);
-    padding: 0.4rem;
-    text-align: center;
-    font-weight: 800;
-    border-radius: 7px;
-    font-size: 15px;
-    cursor: none;
-    margin-top: 1rem;
-    width: 25%;
+    margin-top: 1.5rem;
     border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+}
 
+.inputs .btn svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.inputs .btn span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.inputs .btn:hover svg {
+    transform: translateX(5px) rotate(90deg);
+}
+
+.inputs .btn:hover span {
+    transform: translateX(7px);
 }
 
 .grid2 h3 {

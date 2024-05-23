@@ -9,17 +9,14 @@
 }
 
 .about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.about-inner {
-    width: 90%;
+    margin: auto;
+    width: 100%;
     padding: 2rem;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 .about .col1 {
@@ -27,116 +24,67 @@
     font-weight: 800;
     line-height: 1.5;
     font-size: 17px;
-    width: 50vw;
+    width: 40vw;
 }
 
-.about p{
+.about p {
     color: var(--white);
-
 }
 
-.about .col2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .about img {
-    width: auto;
-    max-height: 80%;
+    width: 80%;
+    height: 100%;
     box-shadow: 2px 2px 15px;
 }
 
 
 .about .btn {
-    background-color:var(--primary-color);
-    color: var(--dark-black);
-    margin-top: 1.5rem;
-}
-
-.about .tab-buttons {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-}
-
-.about .tab-buttons button,
-.col1 button {
-    background-color: var(--light-black);
-    font-weight: 600;
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    cursor: none;
-    padding: 0.5rem;
-    transition: 0.3s;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-.about .tab-buttons button.active {
+    padding: 0.8em 1.3em 0.8em 0.9em;
     background-color: var(--primary-color);
     color: var(--dark-black);
+    margin-top: 1.5rem;
+    border: none;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
 }
 
-.education-item {
-    margin-bottom: 5px;
-    padding: 10px;
-    transition: transform 0.3s ease;
+.about .btn svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.education-item:hover {
-    transform: scale(1.1);
+.about .btn span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.education-year {
-    font-size: 17px;
-    font-weight: bold;
-    opacity: 0.7;
-    margin-bottom: 2px;
+.about .btn:hover svg {
+    transform: translateX(5px) rotate(90deg);
 }
 
-.education-info {
-    margin-left: 10px;
+.about .btn:hover span {
+    transform: translateX(7px);
 }
-
-.education-school {
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: var(--primary-color);
-}
-
-.education-details {
-    font-size: 16px;
-}
-
-
-.tabcontent {
-    display: none;
-}
-
-.tabcontent.active {
-    display: block;
-}
-
 
 
 @media (max-width:1000px) {
-    .about-inner {
+    .about {
         padding: 2.5rem;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .about .col1 {
         width: 90vw;
         padding: 1rem;
+    }
 
+    .about .col2 img{
+        width: auto;
     }
 
 }

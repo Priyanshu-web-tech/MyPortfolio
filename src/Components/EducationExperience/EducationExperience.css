@@ -1,0 +1,55 @@
+#edExp {
+    overflow-x: hidden;
+}
+
+#edExp h1 {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 50px;
+}
+
+.edExp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.edExp .col1 {
+    width: 100%;
+}
+
+.edExp .tab-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.edExp .tab-buttons button,
+.col1 button {
+    background-color: var(--light-black);
+    font-weight: 600;
+    color: var(--white);
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    cursor: none;
+    padding: 0.6rem;
+    transition: 0.3s;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.edExp .tab-buttons button.active {
+    background-color: var(--primary-color);
+    color: var(--dark-black);
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
