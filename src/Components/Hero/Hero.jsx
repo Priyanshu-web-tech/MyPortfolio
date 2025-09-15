@@ -50,7 +50,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 2 }}
           >
-            Your Front End Expert
+            Your Full Stack Expert
           </motion.p>
           </div>
         </motion.div>
