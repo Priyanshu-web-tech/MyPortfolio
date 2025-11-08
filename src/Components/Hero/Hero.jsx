@@ -1,4 +1,3 @@
-import React from "react";
 import "./Hero.css";
 import { motion } from "framer-motion";
 import man from "../../Assets/man.json";

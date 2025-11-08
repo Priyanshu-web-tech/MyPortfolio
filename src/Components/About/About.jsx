@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import "./About.css";
 import Transition from "../Transition/Transition";

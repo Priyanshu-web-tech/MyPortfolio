@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaXTwitter, FaLinkedin } from 'react-icons/fa6';

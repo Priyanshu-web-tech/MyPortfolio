@@ -1,7 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./EducationExperience.css";
-import { FaBriefcase, FaGraduationCap, FaLaptopCode, FaSchool, FaUserGraduate } from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaSchool,
+  FaUserGraduate,
+  FaCode,
+} from "react-icons/fa";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -42,16 +49,25 @@ const EducationExperience = () => {
 
   const experienceData = [
     {
-      title: "SDE Intern at Elanine Creatives",
-      date: "April 2024 - Present",
-      description: "Working as a Software Developer Intern, focusing on full-stack development and gaining practical experience in web technologies.",
+      title: "Software Engineer as QSS Technosoft",
+      date: "August 2024 - Present",
+      description:
+        "Working as a Software Engineer, contributing to various projects and collaborating with cross-functional teams to deliver high-quality software solutions.",
       icon: <FaBriefcase />,
+    },
+    {
+      title: "SDE Intern at Elanine Creatives",
+      date: "April 2024 - July 2024",
+      description:
+        "Working as a Software Developer Intern, focusing on full-stack development and gaining practical experience in web technologies.",
+      icon: <FaLaptopCode />,
     },
     {
       title: "Freelance Developer",
       date: "2023 - Present",
-      description: "Providing freelance development services, specializing in web and mobile application development using modern technologies.",
-      icon: <FaLaptopCode />,
+      description:
+        "Providing freelance development services, specializing in web and mobile application development using modern technologies.",
+      icon: <FaCode />,
     },
   ];
 
@@ -92,7 +108,9 @@ const EducationExperience = () => {
             initial={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
             id="experience"
-            className={`tabcontent ${activeTab === "experience" ? "active" : ""}`}
+            className={`tabcontent ${
+              activeTab === "experience" ? "active" : ""
+            }`}
           >
             <VerticalTimeline className="vertical-timeline-custom-line">
               {experienceData.map((item, index) => (

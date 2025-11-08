@@ -1,4 +1,3 @@
-import React from "react";
 import "./Card.css";
 import {BsBoxArrowUpRight} from "react-icons/bs";
 
