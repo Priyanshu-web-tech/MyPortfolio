@@ -32,10 +32,21 @@
 }
 
 
-.about img {
-    width: 80%;
-    height: 100%;
+.about .col2 {
+    width: 300px;
+    max-width: 40vw;
+}
+
+.about img,
+.about .pic {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 450px; 
+    object-fit: cover;
+    display: block;
     box-shadow: 2px 2px 15px;
+    border-radius: 8px;
 }
 
 
@@ -83,8 +94,17 @@
         padding: 1rem;
     }
 
-    .about .col2 img{
-        width: auto;
+    .about .col2 {
+        width: 90vw;
+        max-width: 640px;
+    }
+
+    .about .col2 img,
+    .about .col2 .pic {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
     }
 
 }

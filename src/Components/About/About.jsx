@@ -18,10 +18,10 @@ const About = () => {
         transition={{ duration: 0.6 }}
         className="about"
       >
-           <div className="col2">
+        <div className="col2">
           <img
             className="pic"
-            src="https://ik.imagekit.io/pz4meracm/Portfolio/mypic.jpg"
+            src="https://ik.imagekit.io/pz4meracm/Portfolio/Photo_2.jpeg"
             alt=""
           />
         </div>
@@ -33,14 +33,18 @@ const About = () => {
             id="overview"
           >
             <p>
-              Hi, I'm a pre-final year student at ABESEC, majoring in Computer
-              Science with a focus on Data Science. I'm passionate about Web
-              Development and Machine Learning. I've worked on diverse projects,
-              showcasing my skills in creating responsive web applications and
-              exploring machine learning concepts like predictive modeling and
-              pattern recognition. I'm actively seeking opportunities to further
-              my knowledge and contribute to innovative projects. Feel free to
-              reach out; I'm excited to connect and explore new possibilities!
+              I’m a Computer Science graduate with a strong focus on web
+              development. I’ve built responsive and user-friendly web
+              applications across multiple projects, working with modern tools
+              and frameworks.
+              <br />
+              I enjoy turning ideas into practical, scalable
+              solutions and continuously improving my skills. I’m currently
+              looking for opportunities where I can contribute to real-world
+              projects and grow as a developer.
+              <br />
+              Feel free to reach out if you’d
+              like to collaborate or discuss opportunities.
             </p>
 
             <a
@@ -69,8 +73,6 @@ const About = () => {
             </a>
           </motion.div>
         </div>
-
-     
       </motion.div>
     </div>
   );

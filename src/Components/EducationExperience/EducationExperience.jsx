@@ -7,7 +7,6 @@ import {
   FaLaptopCode,
   FaSchool,
   FaUserGraduate,
-  FaCode,
 } from "react-icons/fa";
 import {
   VerticalTimeline,
@@ -61,14 +60,7 @@ const EducationExperience = () => {
       description:
         "Working as a Software Developer Intern, focusing on full-stack development and gaining practical experience in web technologies.",
       icon: <FaLaptopCode />,
-    },
-    {
-      title: "Freelance Developer",
-      date: "2023 - Present",
-      description:
-        "Providing freelance development services, specializing in web and mobile application development using modern technologies.",
-      icon: <FaCode />,
-    },
+    }
   ];
 
   return (
