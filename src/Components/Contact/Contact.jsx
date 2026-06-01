@@ -52,8 +52,9 @@ const Contact = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
+        className="section-title-wrap"
       >
-        <h1>Connect with me!</h1>
+        <h1 className="section-heading">Connect with me!</h1>
       </motion.div>
       <div className="grid2">
         <div className="inner-container">

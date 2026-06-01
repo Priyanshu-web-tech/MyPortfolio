@@ -1,22 +1,24 @@
 .marquee-container {
   display: flex;
   flex-direction: column;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .marquee {
-  font-size: 4rem;
-  padding: 15px;
-  white-space: nowrap; 
-  animation-duration: 15s; 
+  font-size: 3.2rem;
+  font-weight: 800;
+  padding: 10px 0;
+  white-space: nowrap;
+  animation-duration: 18s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  letter-spacing: -0.01em;
 }
 
 .marquee p {
   color: var(--white);
+  opacity: 0.65;
 }
-
 
 .marquee.left {
   animation-name: marqueeLeft;
@@ -46,4 +48,10 @@
 
 .marquee:hover {
   animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    font-size: 2rem;
+  }
 }

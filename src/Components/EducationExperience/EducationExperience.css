@@ -2,10 +2,9 @@
     overflow-x: hidden;
 }
 
-#edExp h1 {
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 50px;
+#edExp .section-title-wrap {
+    display: flex;
+    justify-content: center;
 }
 
 .edExp {
@@ -23,27 +22,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    margin-top: 0.5rem;
 }
 
 .edExp .tab-buttons button,
 .col1 button {
     background-color: var(--light-black);
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--white);
-    border: none;
-    border-radius: 16px;
+    border: var(--card-border);
+    border-radius: 99px;
     outline: none;
     cursor: none;
-    padding: 0.6rem;
-    transition: 0.3s;
+    padding: 0.6rem 1.4rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    opacity: 0.7;
+}
+
+.edExp .tab-buttons button:hover {
+    opacity: 1;
+    transform: translateY(-1px);
 }
 
 .edExp .tab-buttons button.active {
-    background-color: var(--primary-color);
-    color: var(--dark-black);
+    background: linear-gradient(135deg, #00ced1, #0C8181);
+    color: #0d0d0e;
+    border-color: transparent;
+    opacity: 1;
+    box-shadow: 0 4px 14px rgba(0, 206, 209, 0.35);
 }
 
 .tabcontent {

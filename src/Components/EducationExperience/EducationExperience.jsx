@@ -69,8 +69,9 @@ const EducationExperience = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
+        className="section-title-wrap"
       >
-        <h1>Education & Experience</h1>
+        <h1 className="section-heading">Education & Experience</h1>
       </motion.div>
       <motion.div
         whileInView={{ x: 0 }}
@@ -111,7 +112,7 @@ const EducationExperience = () => {
                   className="vertical-timeline-element--work"
                   contentStyle={{
                     background: "var(--primary-color)",
-                    color: "var(--dark-black)",
+                    color: "#003535",
                     borderRadius: "10px",
                     boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
                   }}
@@ -120,7 +121,7 @@ const EducationExperience = () => {
                   }}
                   iconStyle={{
                     background: "var(--primary-color)",
-                    color: "var(--dark-black)",
+                    color: "#003535",
                     borderRadius: "50%",
                     padding: "10px",
                   }}
@@ -132,7 +133,7 @@ const EducationExperience = () => {
                   <p
                     style={{
                       textAlign: "justify",
-                      color: "var(--dark-black)",
+                      color: "#003535",
                       fontWeight: "600",
                     }}
                   >
@@ -140,7 +141,7 @@ const EducationExperience = () => {
                   </p>
                   <p
                     style={{
-                      color: "var(--dark-black)",
+                      color: "#003535",
                       fontWeight: "600",
                     }}
                   >
@@ -168,7 +169,7 @@ const EducationExperience = () => {
                   className="vertical-timeline-element--work"
                   contentStyle={{
                     background: "var(--primary-color)",
-                    color: "var(--dark-black)",
+                    color: "#003535",
                     borderRadius: "10px",
                     boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
                   }}
@@ -177,7 +178,7 @@ const EducationExperience = () => {
                   }}
                   iconStyle={{
                     background: "var(--primary-color)",
-                    color: "var(--dark-black)",
+                    color: "#003535",
                     borderRadius: "50%",
                     padding: "10px",
                   }}
@@ -189,7 +190,7 @@ const EducationExperience = () => {
                   <p
                     style={{
                       textAlign: "justify",
-                      color: "var(--dark-black)",
+                      color: "#003535",
                       fontWeight: "600",
                     }}
                   >
@@ -197,7 +198,7 @@ const EducationExperience = () => {
                   </p>
                   <p
                     style={{
-                      color: "var(--dark-black)",
+                      color: "#003535",
                       fontWeight: "600",
                     }}
                   >

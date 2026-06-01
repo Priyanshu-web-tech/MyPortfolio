@@ -4,7 +4,7 @@ import "./Loader.css";
 const Loader = () => {
   useEffect(() => {
     const text = "LOADING AWESOMENESS...";
-    const loaderContainer = document.querySelector(".loader");
+    const loaderText = document.querySelector(".loader-text");
 
     for (let i = 0; i < text.length; i++) {
       const span = document.createElement("span");
@@ -14,11 +14,16 @@ const Loader = () => {
         span.textContent = text[i];
       }
       span.style.animationDelay = `${i * 0.1}s`;
-      loaderContainer.appendChild(span);
+      loaderText.appendChild(span);
     }
   }, []);
 
-  return <div className="loader"></div>;
+  return (
+    <div className="loader">
+      <div className="loader-text"></div>
+      <div className="loader-bar"></div>
+    </div>
+  );
 };
 
 export default Loader;

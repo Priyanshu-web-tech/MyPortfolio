@@ -1,15 +1,15 @@
 .work-list {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 3rem;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem;
   overflow-y: hidden;
   margin-top: 3rem;
+  padding: 0.5rem;
 }
 
-.projects h1 {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 50px;
+.projects .section-title-wrap {
+  display: flex;
+  justify-content: center;
 }
 
 .projects {
@@ -21,8 +21,7 @@
 
 @media (max-width: 1200px) {
   .work-list {
-    display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
   }
 }
 
@@ -30,5 +29,6 @@
   .work-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }

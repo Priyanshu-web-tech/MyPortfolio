@@ -6,8 +6,9 @@
     height: 100vh;
     background: var(--light-black);
     transform-origin: right;
+    z-index: 9999;
   }
-  
+
   .slide-out{
     position: fixed;
     top: 0;
@@ -16,4 +17,5 @@
     height: 100vh;
     background: var(--light-black);
     transform-origin: left;
+    z-index: 9999;
   }

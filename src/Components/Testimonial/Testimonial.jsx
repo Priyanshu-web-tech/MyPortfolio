@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
+import { FaQuoteLeft } from "react-icons/fa";
 
 import { testimonialData } from "../../Constants/config";
 
@@ -16,8 +17,9 @@ const Testimonial = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
+        className="section-title-wrap"
       >
-        <h1>Testimonials</h1>
+        <h1 className="section-heading">Testimonials</h1>
       </motion.div>
       <Swiper
         spaceBetween={50}
@@ -34,11 +36,20 @@ const Testimonial = () => {
         {testimonialData.map((testimonial, index) => (
           <SwiperSlide key={index} className="swiper-slide">
             <div className="testimonial-card">
-              <p className="review">"{testimonial.review}"</p>
+              <div className="quote-icon">
+                <FaQuoteLeft />
+              </div>
+              <p className="review">{testimonial.review}</p>
               <hr className="lin" />
-
-              <h3 className="name">{testimonial.name}</h3>
-              <h4 className="comp">{testimonial.comp}</h4>
+              <div className="testimonial-author">
+                <div className="author-avatar">
+                  {testimonial.name.charAt(0)}
+                </div>
+                <div className="author-info">
+                  <h3 className="name">{testimonial.name}</h3>
+                  <h4 className="comp">{testimonial.comp}</h4>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
         ))}

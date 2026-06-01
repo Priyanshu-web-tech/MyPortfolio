@@ -1,6 +1,6 @@
-.contact h1 {
-    margin-top: 3rem;
-    font-size: 50px;
+.contact .section-title-wrap {
+    display: flex;
+    justify-content: center;
 }
 
 .contact {
@@ -23,6 +23,15 @@
     grid-template-columns: auto auto;
 }
 
+.column2 h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #00ced1, #0C8181);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
 .inputs {
     display: flex;
@@ -33,30 +42,56 @@
 
 .inputs input,
 textarea {
-    border-radius: 6px;
-    background-color: #fff;
-    color: #111;
-    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--light-black);
+    color: var(--white);
+    border: 1px solid rgba(0, 206, 209, 0.15);
+    padding: 0.9rem 1.1rem;
     margin-top: 1rem;
     width: 90%;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputs input::placeholder,
+textarea::placeholder {
+    color: rgba(150, 150, 150, 0.7);
+}
+
+.light-theme .inputs input::placeholder,
+.light-theme textarea::placeholder {
+    color: rgba(80, 80, 80, 0.5);
+}
+
+.inputs input:focus,
+textarea:focus {
+    border-color: rgba(0, 206, 209, 0.6);
+    box-shadow: 0 0 0 3px rgba(0, 206, 209, 0.1);
 }
 
 textarea {
     height: 150px;
+    resize: vertical;
 }
 
 .inputs .btn {
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
-    padding: 0.8em 1.3em 0.8em 0.9em;
-    background-color: var(--primary-color);
-    color: var(--dark-black);
+    gap: 6px;
+    padding: 0.75em 1.5em;
+    background: linear-gradient(135deg, #00ced1, #0C8181);
+    color: #0d0d0e;
     margin-top: 1.5rem;
     border: none;
     letter-spacing: 0.05em;
-    border-radius: 16px;
+    border-radius: 99px;
+    cursor: none;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 206, 209, 0.3);
 }
 
 .inputs .btn svg {
@@ -69,6 +104,11 @@ textarea {
     transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
+.inputs .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(0, 206, 209, 0.5);
+}
+
 .inputs .btn:hover svg {
     transform: translateX(5px) rotate(90deg);
 }
@@ -77,15 +117,12 @@ textarea {
     transform: translateX(7px);
 }
 
-.grid2 h3 {
-    font-size: 1.5rem;
-}
-
-
 .msg {
     color: var(--primary-color);
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 @media (max-width:760px) {
@@ -94,11 +131,12 @@ textarea {
         flex-direction: column;
     }
 
-    .column1{
+    .column1 {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .inputs input,
     textarea {
         width: 100%;

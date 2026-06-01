@@ -1,23 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap');
 
 :root {
-  --background-color: #131212;
+  --background-color: #0d0d0e;
   --primary-color: #00ced1;
   --secondary-color: #0C8181;
-  --light-gray: rgba(0, 0, 0, 0.7);
-  --light-black: #1E1E1F;
-  --dark-black: #111;
+  --light-gray: rgba(0, 0, 0, 0.75);
+  --light-black: #1a1a1c;
+  --dark-black: #0d0d0e;
   --transparent: transparent;
-  --white: #fff;
+  --white: #f0f0f0;
   --lg: #5F5E5F;
+  --glow: 0 0 18px rgba(0, 206, 209, 0.45);
+  --card-border: 1px solid rgba(0, 206, 209, 0.12);
+  --gradient-text: linear-gradient(135deg, #00ced1, #0C8181);
 }
 
 .light-theme {
-  --background-color: #fff;
-  --light-black: #f0f0f0;
-  --dark-black: #fff;
-  --white: #111;
-  --lg: #d1cfcf;
+  --background-color: #e8edf6;
+  --light-black: #cdd6e8;
+  --dark-black: #e8edf6;
+  --white: #16202e;
+  --lg: #6e82a0;
+  --glow: 0 0 18px rgba(0, 140, 150, 0.32);
+  --card-border: 1px solid rgba(0, 140, 150, 0.28);
 }
 
 
@@ -35,7 +40,6 @@ body {
   user-select: none;
   transition: background-color 0.3s ease-in-out;
   font-family: 'Raleway', sans-serif;
-
 }
 
 ul {
@@ -49,7 +53,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
   background-color: var(--background-color);
 }
 
@@ -58,17 +62,49 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B8B8C2;
+  background: var(--secondary-color);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #828284;
+  background: var(--primary-color);
+}
+
+.section-heading {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 3rem;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+  .section-heading {
+    font-size: 36px;
+  }
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-text);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.section-heading:hover::after {
+  width: 100%;
 }
 
 /* The line */
 .vertical-timeline.vertical-timeline-custom-line::before {
-  background: var(--white);
+  background: rgba(0, 206, 209, 0.3);
 }
 
 /* Icon container's border */
